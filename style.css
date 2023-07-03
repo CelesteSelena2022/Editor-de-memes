@@ -155,8 +155,9 @@ Estilos para el aside de IMAGEN
 
 .panel__title {
     text-align: center;
-    font-size: 18rem;
+    font-size: 20rem;
     font-weight: 600;
+    margin-bottom: 1em;
 }
 
 .panel-imagen input {
@@ -261,4 +262,41 @@ estilos para el circulo del input range
 /**************************
 Comienzo de Estilos para el aside de TEXTO
 ************************** */
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.panel-control__checkbox{
+    margin-top: 0.8em;
+    font-size: 12rem;
+}
+
+.button-container {
+    margin-bottom: 5px;
+    width: 100%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.panel-texto input {
+    display: block;
+}
+
+.flex-container input[type="number"] {
+    width: 50%;
+}
+
+.button {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1m;
+    border-radius: 3rem;
+    font-size: 14rem;
+    cursor: pointer;
+    width: 100%;
+}
 
