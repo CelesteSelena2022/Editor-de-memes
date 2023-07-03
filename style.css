@@ -104,7 +104,7 @@ Estilos para el main
 }
 
 .title__meme{
-    min-height: 8vh;
+    min-height: 12vh;
     background-color: rgb(17, 255, 0);
     font-size: 25rem;
     font-weight: 900;
@@ -129,38 +129,34 @@ Estilos para el button de main "descargar meme"
 }
 
 /**************************
-Estilos para el aside de imagen
+Estilos para el aside de IMAGEN
 ************************** */
 
-/* .hidden {
+.hidden {
     display: none;
-} */
+}
 
 .panel {
     width: 25vh;
     min-height: 100vh;
-    padding: 3em 2em;
+    padding: 2em 1em;
     position: fixed;
     top: 0;
     right: 0;
     z-index: 1;
     box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
     overflow: auto;
+    font-size: 14rem;
+}
+
+.panel__close {
+    display: none;
 }
 
 .panel__title {
     text-align: center;
     font-size: 18rem;
     font-weight: 600;
-}
-
-.panel div {
-    font-size: 15rem;
-}
-
-.container-fondo {
-    display: flex;
-    align-items: center;
 }
 
 .panel-imagen input {
@@ -176,6 +172,12 @@ Estilos para el aside de imagen
     font-size: 17rem;
 }
 
+.panel-control__input {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
+}
+
 .panel-control-columns {
     display: flex;
     justify-content: space-around;
@@ -185,18 +187,16 @@ Estilos para el aside de imagen
 .panel-control-column {
     display: flex;
     width: 49%;
+    align-items: center;
 }
 
-.panel-control-color {
-    display: flex;
-    width: 100%;
+.panel-value__color{
+    margin-left: 0.2em;
 }
 
-.panel-control-column input {
-    width: 100%;
-}
-
-/* estilos para el circulo del input color */
+/**************************
+estilos para el circulo del input color
+************************** */
 .panel-control-column input[type='color'] {
     width: 19px;
     height: 19px;
@@ -214,18 +214,51 @@ input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 100%;
 }
+/* ************************** */
 
 .control-slider{
     margin: 1em 0em;
 }
 
+/**************************
+estilos para el circulo del input range
+************************** */
 .control-slider input[type='range'] {
     margin: 0.5em 0em;
-}
-
-
-.panel-control__input {
     width: 100%;
-    height: 35px;
-    padding: 0.5em;
+    height: 6px;
+    background-color: #5a5d68;
+    border-radius: 10px;
+    appearance: none;
 }
+
+.control-slider input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* solo es de referencia, no olvidar cambiarlo con el modo oscuro/claro */
+    background-color: #ffffff;
+}
+/* ************************** */
+
+.button__reset {
+    margin-top: 1em;
+    background-color: blue;
+    padding: 0.7em;
+    border-radius: 3px;
+}
+
+@media (max-width: 1300px) {
+    .panel__close {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+}
+
+/**************************
+Comienzo de Estilos para el aside de TEXTO
+************************** */
+
