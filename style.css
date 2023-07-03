@@ -20,16 +20,24 @@ Estilos para el contenedor de header y main
 ************************** */
 
 .container {
-    width: 75%;
+    width: 100%;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /**************************
 Estilos para el header
 ************************** */
 
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .header {
-    min-height: 20vh;
+    min-height: 18vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,20 +51,17 @@ Estilos para el header
     margin-bottom: 0.4em;
 }
 
-.container-header-buttom {
+.container-header-button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.header__buttom {
-    border: none;
-    background: none;
-    cursor: pointer;
+.header__button {
     margin: 0em 0.8em;
 }
 
-.header__buttom--light {
+.header__button--light {
     display: none;
 }
 
@@ -64,6 +69,10 @@ Estilos para el header
     .header__title {
         font-size: 25rem;
     }
+}
+
+header{
+    background-color: red;
 }
 
 main{
@@ -77,4 +86,50 @@ aside {
 /**************************
 Estilos para el main
 ************************** */
+.container-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.container-meme{
+    min-height: 65vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title__meme{
+    min-height: 12vh;
+    background-color: rgb(17, 255, 0);
+    font-size: 25rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__meme {
+    flex-grow: 1;
+    background-color: black;
+}
+
+/**************************
+Estilos para el button de main "descargar meme"
+************************** */
+
+.button-meme {
+    background-color: green;
+    padding: 0.7em;
+    margin-top: 1em;
+}
+
+/**************************
+Estilos para el aside de imagen
+************************** */
+
+.hidden {
+    display: none;
+}
