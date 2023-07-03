@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -136,7 +137,7 @@ Estilos para el aside de imagen
 } */
 
 .panel {
-    width: 22vh;
+    width: 25vh;
     min-height: 100vh;
     padding: 3em 2em;
     position: fixed;
@@ -162,15 +163,69 @@ Estilos para el aside de imagen
     align-items: center;
 }
 
-.container-filtros input {
+.panel-imagen input {
     display: block;
 }
 
-h3 {
-    /* margin: 1em 0em 1em 0em; */
+.panel-control {
+    margin-bottom: 1em;
+}
+
+.control__title {
+    margin-bottom: 0.5em;
     font-size: 17rem;
 }
 
-.container-filtros input {
-    margin: 0.7em 0em;
+.panel-control-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.panel-control-column {
+    display: flex;
+    width: 49%;
+}
+
+.panel-control-color {
+    display: flex;
+    width: 100%;
+}
+
+.panel-control-column input {
+    width: 100%;
+}
+
+/* estilos para el circulo del input color */
+.panel-control-column input[type='color'] {
+    width: 19px;
+    height: 19px;
+    border-width: 0px;
+    padding: 0px;
+    max-width: 18px;
+    border-radius: 100%;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+
+.control-slider{
+    margin: 1em 0em;
+}
+
+.control-slider input[type='range'] {
+    margin: 0.5em 0em;
+}
+
+
+.panel-control__input {
+    width: 100%;
+    height: 35px;
+    padding: 0.5em;
 }
