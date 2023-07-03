@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 1px;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+/**************************
+Estilos para el contenedor de header y main
+************************** */
+
+.container {
+    width: 75%;
+    min-height: 100vh;
+}
+
+/**************************
+Estilos para el header
+************************** */
+
+.header {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 35rem;
+    font-weight:500;
+    margin-bottom: 0.4em;
+}
+
+.container-header-buttom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.header__buttom {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0em 0.8em;
+}
+
+.header__buttom--light {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header__title {
+        font-size: 25rem;
+    }
+}
+
+main{
+    background-color: blue;
+}
+
+aside {
+    background-color: aqua;
+}
+
+/**************************
+Estilos para el main
+************************** */
+
