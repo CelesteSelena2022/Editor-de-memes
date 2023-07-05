@@ -88,7 +88,7 @@ aside {
 Estilos para el main
 ************************** */
 .container-main {
-    flex-grow: 1;
+    min-height: 84vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -96,9 +96,9 @@ Estilos para el main
 }
 
 .container-meme{
-    min-height: 65vh;
+    height: 76%;
     width: 100%;
-    max-width: 610px;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -159,10 +159,6 @@ Estilos para el aside de IMAGEN
     margin-bottom: 1em;
 }
 
-.panel-imagen input {
-    display: block;
-}
-
 .panel-control {
     margin-bottom: 1em;
 }
@@ -184,24 +180,28 @@ Estilos para el aside de IMAGEN
     width: 100%;
 }
 
-.panel-control-column {
+.flex-container {
     display: flex;
-    width: 49%;
     align-items: center;
+}
+
+.panel-control-column {
+    width: 49%;
 }
 
 .panel-value__color{
     margin-left: 0.2em;
 }
 
+.panel input {
+    display: block;
+}
+
 /**************************
 estilos para el circulo del input color
 ************************** */
 .panel-control-column input[type='color'] {
-    width: 19px;
     height: 19px;
-    border-width: 0px;
-    padding: 0px;
     max-width: 18px;
     border-radius: 100%;
 }
@@ -261,30 +261,24 @@ estilos para el circulo del input range
 /**************************
 Comienzo de Estilos para el aside de TEXTO
 ************************** */
-.flex-container {
-    display: flex;
-    align-items: center;
-}
 
 .panel-control__checkbox{
     margin-top: 0.8em;
     font-size: 12rem;
 }
 
-.button-container {
-    margin-bottom: 5px;
-    width: 100%;
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
+input[type="checkbox"] {
+    margin-right: 0.4em;
 }
 
-.panel-texto input {
-    display: block;
+.buttons-container {
+    margin-bottom: 5px;
+    display: flex;
+    width: 100%;
 }
 
 .flex-container input[type="number"] {
-    width: 50%;
+    width: 100%;
 }
 
 .button {
@@ -292,10 +286,8 @@ Comienzo de Estilos para el aside de TEXTO
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1m;
     border-radius: 3rem;
     font-size: 14rem;
     cursor: pointer;
     width: 100%;
 }
-

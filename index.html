@@ -57,7 +57,7 @@
             </button>
         </main>
     </div>
-    <aside class="panel">
+    <aside class="hidden panel">
         <button class="panel__close">
             <i class="fa-solid fa-xmark"></i>
         </button>
@@ -78,7 +78,7 @@
                     FONDO
                 </h3>
                 <div class="panel-control-columns">
-                    <div class="panel-control-column">
+                    <div class="panel-control-column flex-container">
                         <input type="color" name="" id="">
                         <span class="panel-value__color">
                             #FFFFF
@@ -173,8 +173,8 @@
             </button>
         </section>
     </aside>
-    <aside class="hidden panel">
-        <section class="panel-texto">
+    <aside class="panel">
+        <section>
             <h2 class="panel__title">
                 TEXTO
             </h2>
@@ -263,11 +263,11 @@
             <div class="panel-control">
                 <div class="panel-control-columns">
                     <!-- COLOR DE TEXTO -->
-                    <div class="panel-control panel-control-column">
+                    <div class="panel-control-column">
                         <h3 class="control__title">
                             COLOR
                         </h3>
-                        <div class="panel-control__color">
+                        <div class="flex-container panel-control__input">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #000000
@@ -275,11 +275,11 @@
                         </div>
                     </div>
                     <!-- COLOR DE FONDO -->
-                    <div class="panel-control panel-control-column">
+                    <div class="panel-control-column">
                         <h3 class="control__title">
                             FONDO
                         </h3>
-                        <div class="panel-control__color">
+                        <div class="flex-container panel-control__input">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #FFFFFF
@@ -299,14 +299,14 @@
                 <h3 class="control__title">
                     CONTORNO
                 </h3>
-                <div class="button-container">
-                    <button>
+                <div class="buttons-container">
+                    <button class="button">
                         Ninguno
                     </button>
-                    <button>
+                    <button class="button">
                         Claro
                     </button>
-                    <button>
+                    <button class="button">
                         Oscuro
                     </button>
                 </div>
