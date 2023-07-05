@@ -72,18 +72,6 @@ button {
     }
 }
 
-header{
-    background-color: red;
-}
-
-main{
-    background-color: blue;
-}
-
-aside {
-    background-color: aqua;
-}
-
 /**************************
 Estilos para el main
 ************************** */
@@ -98,19 +86,19 @@ Estilos para el main
 .container-meme{
     height: 76%;
     width: 100%;
-    max-width: 50%;
+    max-width: 46%;
     display: flex;
     flex-direction: column;
 }
 
 .title__meme{
     min-height: 12vh;
-    background-color: rgb(17, 255, 0);
     font-size: 25rem;
     font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:beige;
 }
 
 .content__meme {
@@ -136,7 +124,7 @@ Estilos para el aside de IMAGEN
 }
 
 .panel {
-    width: 25vh;
+    width: 260px;
     min-height: 100vh;
     padding: 2em 1em;
     position: fixed;
@@ -170,8 +158,9 @@ Estilos para el aside de IMAGEN
 
 .panel-control__input {
     width: 100%;
-    height: 35px;
+    height: 35rem;
     padding: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .panel-control-columns {
@@ -201,9 +190,9 @@ Estilos para el aside de IMAGEN
 estilos para el circulo del input color
 ************************** */
 .panel-control-column input[type='color'] {
-    height: 19px;
-    max-width: 18px;
     border-radius: 100%;
+    height: 18rem;
+    width: 18rem;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -213,6 +202,8 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 input[type="color"]::-webkit-color-swatch {
     border: none;
     border-radius: 100%;
+    width: 18rem;
+    height: 18rem;
 }
 /* ************************** */
 
@@ -226,16 +217,16 @@ estilos para el circulo del input range
 .control-slider input[type='range'] {
     margin: 0.5em 0em;
     width: 100%;
-    height: 6px;
+    height: 6rem;
     background-color: #5a5d68;
-    border-radius: 10px;
+    border-radius: 10rem;
     appearance: none;
 }
 
 .control-slider input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
+    height: 16rem;
+    width: 16rem;
     border-radius: 50%;
     cursor: pointer;
     /* solo es de referencia, no olvidar cambiarlo con el modo oscuro/claro */
@@ -247,15 +238,7 @@ estilos para el circulo del input range
     margin-top: 1em;
     background-color: blue;
     padding: 0.7em;
-    border-radius: 3px;
-}
-
-@media (max-width: 1300px) {
-    .panel__close {
-        display: flex;
-        justify-content: end;
-        width: 100%;
-    }
+    border-radius: 3rem;
 }
 
 /**************************
@@ -272,7 +255,7 @@ input[type="checkbox"] {
 }
 
 .buttons-container {
-    margin-bottom: 5px;
+    margin-bottom: 0.5em;
     display: flex;
     width: 100%;
 }
@@ -282,7 +265,7 @@ input[type="checkbox"] {
 }
 
 .button {
-    height: 36px;
+    height: 36rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -290,4 +273,37 @@ input[type="checkbox"] {
     font-size: 14rem;
     cursor: pointer;
     width: 100%;
+    margin-left: 0.1em;
 }
+
+@media (max-width: 1300px) {
+    .panel__close {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+}
+
+/**************************
+MODO CLARO
+************************** */
+
+.header--lightbulb {
+    background-color: #D69F7E;
+}
+
+.container-main--lightbulb{
+    background-color: #9D6B53;
+}
+
+.panel--lightbulb {
+    background-color: #ddb892
+}
+
+.panel-control__input--lightbulb {
+    background-color:#CD9777;
+}
+
+/**************************
+MODO OSCURO
+************************** */
