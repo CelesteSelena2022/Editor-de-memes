@@ -134,7 +134,6 @@ Estilos para el aside de IMAGEN
     right: 0;
     z-index: 1;
     box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-    overflow: auto;
     font-size: 14rem;
 }
 
@@ -160,7 +159,7 @@ Estilos para el aside de IMAGEN
 
 .panel-control__input {
     width: 100%;
-    height: 35rem;
+    height: 36rem;
     padding: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -174,11 +173,11 @@ Estilos para el aside de IMAGEN
 .flex-container {
     display: flex;
     align-items: center;
+    height: 36rem;
 }
 
 .panel-control-column {
     width: 49%;
-    height: 35rem;
 }
 
 .panel-value__color{
@@ -248,6 +247,10 @@ estilos para el circulo del input range
 Comienzo de Estilos para el aside de TEXTO
 ************************** */
 
+.panel textarea {
+    height: 36rem;
+}
+
 .panel-control__checkbox{
     margin-top: 0.8em;
     font-size: 12rem;
@@ -306,6 +309,9 @@ MODO CLARO
 .panel-control__input--lightbulb {
     background-color:#CD9777;
 } */
+
+/* falta cambiar el color al input de range */
+
 
 /**************************
 MODO OSCURO
