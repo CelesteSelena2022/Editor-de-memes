@@ -20,11 +20,11 @@
             </h1>
             <!-- botones de header -->
             <div class="container-header-button">
-                <button class="header__button">
+                <button class="header__button header__button--dark">
                     <i class="fa-regular fa-file-image"></i>
                     Imagen
                 </button>
-                <button class="header__button">
+                <button class="header__button header__button--dark">
                     <i class="fa-solid fa-font"></i>
                     Texto
                 </button>
@@ -39,7 +39,7 @@
             </div>
         </header>
         <!-- fin de los estilos de header -->
-        <main class="container-main container-main--lightbulb">
+        <main class="container-main container-main--lightbulb container-main--dark">
             <div class="container-meme">
                 <p class="title__meme">
                     TOP TEXT
@@ -57,8 +57,8 @@
             </button>
         </main>
     </div>
-    <aside class="hidden panel panel--dark">
-        <button class="panel__close">
+    <aside class="hidden panel panel--dark panel--lightbulb">
+        <button class="panel__close panel__close--dark">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section class="panel-imagen">
@@ -70,7 +70,7 @@
                 <h3 class="control__title">
                     URL
                 </h3>
-                <input type="text" class="panel-control__input" id="url-input">
+                <input type="text" class="panel-control__input panel-control__input--dark panel-control__input--lightbulb" id="url-input">
             </div>
             <!-- fondo -->
             <div class="panel-control">
@@ -78,14 +78,14 @@
                     FONDO
                 </h3>
                 <div class="panel-control-columns">
-                    <div class="panel-control-column flex-container">
+                    <div class="panel-control-column flex-container panel-control__input--dark panel-control__input--lightbulb">
                         <input type="color" name="" id="">
                         <span class="panel-value__color">
                             #FFFFF
                         </span>
                     </div>
                     <div class="panel-control-column">
-                        <select name="" id="" class="panel-control__input">
+                        <select name="" id="" class="panel-control__input panel-control__input--dark panel-control__input--lightbulb">
                             <option value="">
                                 Ninguno
                             </option>
@@ -168,13 +168,13 @@
                     <input type="range" name="" id="">
                 </div>
             </div>
-            <button class="button__reset">
+            <button class="button__reset panel-control__input--dark panel-control__input--lightbulb">
                 Reestablecer filtros
             </button>
         </section>
     </aside>
-    <aside class="panel panel--lightbulb">
-        <button class="panel__close">
+    <aside class="panel panel--lightbulb panel--dark">
+        <button class="panel__close panel__close--dark">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section>
@@ -186,7 +186,7 @@
                 <h3 class="control__title">
                     SUPERIOR
                 </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--lightbulb">
+                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                     TOP TEXT
                 </textarea>
                 <div class="flex-container panel-control__checkbox">
@@ -201,7 +201,7 @@
                 <h3 class="control__title">
                     INFERIOR
                 </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--lightbulb">
+                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                     TOP TEXT
                 </textarea>
                 <div class="flex-container panel-control__checkbox">
@@ -217,7 +217,7 @@
                     FUENTE
                 </h3>
                 <!-- familia de fuente -->
-                <select name="" id="" class="panel-control__input panel-control__input--lightbulb">
+                <select name="" id="" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                     <option value="">
                         Arial
                     </option>
@@ -248,16 +248,16 @@
                 </select>
                 <div class="flex-container">
                     <!-- tamaño de letra -->
-                    <input type="number" name="" id="" class="panel-control__input panel-control__input--lightbulb">
+                    <input type="number" name="" id="" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                     <!-- alineacion del texto -->
                     <div class="buttons-container">
-                        <button class="button panel-control__input--lightbulb">
+                        <button class="button panel-control__input--lightbulb panel-control__input--dark">
                             <i class="fa-solid fa-align-left"></i>
                         </button>
-                        <button class="button panel-control__input--lightbulb">
+                        <button class="button panel-control__input--lightbulb panel-control__input--dark">
                             <i class="fa-solid fa-align-center"></i>
                         </button>
-                        <button class="button panel-control__input--lightbulb">
+                        <button class="button panel-control__input--lightbulb panel-control__input--dark">
                             <i class="fa-solid fa-align-right"></i>
                         </button>
                     </div>
@@ -270,7 +270,7 @@
                         <h3 class="control__title">
                             COLOR
                         </h3>
-                        <div class="flex-container panel-control__input panel-control__input--lightbulb">
+                        <div class="flex-container panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #000000
@@ -282,7 +282,7 @@
                         <h3 class="control__title">
                             FONDO
                         </h3>
-                        <div class="flex-container panel-control__input panel-control__input--lightbulb">
+                        <div class="flex-container panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #FFFFFF
@@ -303,13 +303,13 @@
                     CONTORNO
                 </h3>
                 <div class="buttons-container">
-                    <button class="button panel-control__input--lightbulb">
+                    <button class="button panel-control__input--lightbulb panel-control__input--dark">
                         Ninguno
                     </button>
-                    <button class="button panel-control__input--lightbulb">
+                    <button class="button panel-control__input--lightbulb panel-control__input--dark">
                         Claro
                     </button>
-                    <button class="button panel-control__input--lightbulb">
+                    <button class="button panel-control__input--lightbulb panel-control__input--dark">
                         Oscuro
                     </button>
                 </div>
@@ -319,14 +319,14 @@
                 <h3 class="control__title">
                     ESPACIADO
                 </h3>
-                <input type="number" name="" id="" class="panel-control__input panel-control__input--lightbulb">
+                <input type="number" name="" id="" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
             </div>
             <!-- INTERLINEADO -->
             <div class="panel-control">
                 <h3 class="control__title">
                     INTERLINEADO
                 </h3>
-                <select name="" id="" class="panel-control__input panel-control__input--lightbulb">
+                <select name="" id="" class="panel-control__input panel-control__input--lightbulb panel-control__input--dark">
                     <option value="">
                         0.8
                     </option>
