@@ -9,11 +9,12 @@ html {
 }
 
 body{
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     display: flex;
+    overflow: auto;
 }
 
 /**************************
@@ -38,12 +39,13 @@ button {
 }
 
 .header {
-    min-height: 16vh;
+    min-height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #D69F7E;
 }
 
 .header__title {
@@ -76,11 +78,12 @@ button {
 Estilos para el main
 ************************** */
 .container-main {
-    min-height: 84vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #9D6B53;
 }
 
 .container-meme{
@@ -127,7 +130,8 @@ Estilos para el aside de IMAGEN
 
 .panel {
     width: 260px;
-    min-height: 100vh;
+    height: 100%;
+    overflow: auto;
     padding: 2em 1em;
     position: fixed;
     top: 0;
@@ -135,6 +139,7 @@ Estilos para el aside de IMAGEN
     z-index: 1;
     box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
     font-size: 14rem;
+    background-color: #ddb892
 }
 
 .panel__close {
@@ -162,6 +167,7 @@ Estilos para el aside de IMAGEN
     height: 36rem;
     padding: 0.5em;
     margin-bottom: 0.5em;
+    background-color:#CD9777;
 }
 
 .panel-control-columns {
@@ -192,21 +198,17 @@ Estilos para el aside de IMAGEN
 estilos para el circulo del input color
 ************************** */
 .panel-control-column input[type='color'] {
-    border-radius: 100%;
+    /* border-radius: 100%; */
     height: 18rem;
     width: 18rem;
+    background-color: transparent;
     border: none;
 }
 
-input[type="color"]::-webkit-color-swatch-wrapper {
+input[type="color"]::-webkit-color-swatch, ::-webkit-color-swatch-wrapper  {
+    border: none;
+    border-radius: 100%;
     padding: 0;
-}
-
-input[type="color"]::-webkit-color-swatch {
-    border: none;
-    border-radius: 100%;
-    width: 18rem;
-    height: 18rem;
 }
 /* ************************** */
 
@@ -264,6 +266,7 @@ input[type="checkbox"] {
     margin-bottom: 0.5em;
     display: flex;
     width: 100%;
+    height: 34px;
 }
 
 .flex-container input[type="number"] {
@@ -291,33 +294,12 @@ input[type="checkbox"] {
 }
 
 /**************************
-MODO CLARO
-************************** */
-
-/* .header--lightbulb {
-    background-color: #D69F7E;
-}
-
-.container-main--lightbulb{
-    background-color: #9D6B53;
-}
-
-.panel--lightbulb {
-    background-color: #ddb892
-}
-
-.panel-control__input--lightbulb {
-    background-color:#CD9777;
-} */
-
-/* falta cambiar el color al input de range */
-
-
-/**************************
 MODO OSCURO
 ************************** */
 
-.header--dark {
+/* falta cambiar el color al input de range */
+
+/* .header--dark {
     background-color: #191e2b;
     color: white;
 }
@@ -343,4 +325,4 @@ MODO OSCURO
 
 .panel__close--dark {
     color: white;
-}
+} */
