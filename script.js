@@ -1,4 +1,7 @@
+//********************************
 // toma la url y la convierte en el fondo del meme
+//********************************
+
 // Problema: a medida que se achica el ancho o alto corta la imagen
 
 const imgMeme = document.getElementById(`img-meme`);
@@ -13,20 +16,20 @@ const changeBackground = () => {
     imgMeme.style.backgroundPosition = `center`;
 }
 
-//cambiar a modo oscuro a los aside e intercambiar un aside con el otro con los botones texto e imagen
+
+//********************************
+//intercambiar un aside con el otro con los botones texto e imagen
+//********************************
+
 
 const btnText = document.getElementById(`btn-text`); //trae el boton para activar el aside texto
 const btnImg = document.getElementById(`btn-img`); //trae el boton para activar el aside img
-const modeButton = document.getElementById(`mode-btn`); //trae el boton para el modo oscuro
 
 const panelText = document.getElementById(`panel-text`); //trae el panel texto
 const panelImg = document.getElementById(`panel-img`); //trae el panel imagen
-const bothAsides = document.getElementsByClassName(`panel`); //trae ambos  por class ???
 
 btnText.addEventListener('click', ()=> hidenTextAside());
 btnImg.addEventListener('click', ()=> hidenImgAside());
-modeButton.addEventListener('click', () => changeMode());
-
 
 const hidenTextAside = () => {
     panelImg.classList.add('hidden');
@@ -38,12 +41,9 @@ const hidenImgAside = () => {
     panelImg.classList.remove('hidden');
 }
 
-const changeMode = () => {
-    bothAsides[0].classList.add('panel--dark')
-    bothAsides[1].classList.add('panel--dark')
-}
-
+//********************************
 //tomar valor del input type range 
+//********************************
 
 const brightInput = document.getElementById(`bright-input`); // BRILLO
 const opacityInput = document.getElementById(`opacity-input`); // OPACIDAD
@@ -70,3 +70,21 @@ hueInput.addEventListener(`input`, (e) => filtros(e));
 saturatedInput.addEventListener(`input`, (e) => filtros(e));
 invertInput.addEventListener(`input`, (e) => filtros(e));
 // para ver cambiar el valor del input
+
+//********************************
+//tomar valor del input type color
+//********************************
+
+const colorPicker = document.getElementById("color-picker");
+const colorName = document.getElementById("color-name");
+
+//suponiendo que tenemos la sig. funcion:
+const cambiarFondoMeme = () => {
+    let colorElegido = colorPicker.value;
+    //si queremos insertar texto usamos:
+    colorName.innerHTML = `${colorElegido}`;
+};
+
+colorPicker.addEventListener("input", () => cambiarFondoMeme());
+
+

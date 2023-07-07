@@ -239,6 +239,9 @@ estilos para el circulo del input range
     margin-top: 1em;
     padding: 0.7em;
     border-radius: 3rem;
+    width: 70%;
+    height: 36rem;
+    background-color:#CD9777;
 }
 
 /**************************
