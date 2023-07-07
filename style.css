@@ -64,10 +64,6 @@ button {
     margin: 0em 0.8em;
 }
 
-.header__button--light {
-    display: none;
-}
-
 @media (max-width: 700px) {
     .header__title {
         font-size: 25rem;
@@ -299,7 +295,7 @@ MODO OSCURO
 
 /* falta cambiar el color al input de range */
 
-/* .header--dark {
+ /* .header--dark {
     background-color: #191e2b;
     color: white;
 }
@@ -307,12 +303,14 @@ MODO OSCURO
 .container-main--dark {
     background-color: #30343f;
     color: white;
-}
+} */
 
 .panel--dark {
     background-color: #252935;
     color: white;
 }
+
+/*
 
 .panel-control__input--dark {
     background-color: #393e49;
