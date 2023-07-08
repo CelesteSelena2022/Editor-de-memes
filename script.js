@@ -87,4 +87,41 @@ const cambiarFondoMeme = () => {
 
 colorPicker.addEventListener("input", () => cambiarFondoMeme());
 
+//********************************
+//cambiar a modo oscuro los asides y modificar el button para cambiar los modos
+//********************************
+const mainContainer = document.getElementById("container-main");
+const header = document.getElementById("header");
+const inputDark = document.getElementsByClassName(`panel-control__input`);
+const modeButton = document.getElementById("mode-btn");
+
+modeButton.addEventListener("click", () => changeMode());
+
+const changeMode = () => {
+    //toggle realiza la funcion y su viceversa
+    panelText.classList.toggle(`panel--dark`)
+    mainContainer.classList.toggle(`container-main--dark`)
+    header.classList.toggle(`header--dark`);
+    inputDark[5].classList.toggle(`panel-control__input--dark`);
+
+    //contains es como include
+    if (mainContainer.classList.contains("container-main--dark")) {
+        // con el innerhtml podemos agregar etiquetas
+        modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
+    } else {
+        modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
+    }
+}
+
+//********************************
+//tomar valor del input type checkbox
+//********************************
+
+const topText = document.getElementById("top-text");
+const bottomText = document.getElementById("bottom-text");
+
+topText.addEventListener(`change`, hideTopText());
+bottomText.addEventListener(`change`, hideBottomText());
+
+
 

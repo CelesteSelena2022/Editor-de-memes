@@ -14,32 +14,28 @@
 <body>
     <div class="container">
         <!-- comienzo de los estilos del header -->
-        <header class="header header--dark">
+        <header class="header" id="header">
             <h1 class="header__title">
                 Generador de Memes 
             </h1>
             <!-- botones de header -->
             <div class="container-header-button">
-                <button class="header__button header__button--dark" id="btn-img">
+                <button class="header__button" id="btn-img">
                     <i class="fa-regular fa-file-image"></i>
                     Imagen
                 </button>
-                <button class="header__button header__button--dark" id="btn-text">
+                <button class="header__button" id="btn-text">
                     <i class="fa-solid fa-font"></i>
                     Texto
                 </button>
-                <!-- <button class="header__button header__button--dark">
+                <button class="header__button" id="mode-btn">
                     <i class="fa-regular fa-lightbulb"></i>
                     Modo oscuro
-                </button> -->
-                <button class="header__button" id="mode-btn">
-                    <!-- <i class="fa-solid fa-lightbulb"></i> -->
-                    Modo claro
                 </button>
             </div>
         </header>
         <!-- fin de los estilos de header -->
-        <main class="container-main container-main--dark">
+        <main class="container-main" id="container-main">
             <div class="container-meme">
                 <p class="title__meme">
                     TOP TEXT
@@ -56,8 +52,8 @@
             </button>
         </main>
     </div>
-    <aside class="panel" id="panel-img">
-        <button class="panel__close panel__close--dark">
+    <aside class="hidden panel" id="panel-img">
+        <button class="panel__close">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section class="panel-imagen">
@@ -69,7 +65,7 @@
                 <h3 class="control__title">
                     URL
                 </h3>
-                <input type="text" class="panel-control__input panel-control__input--dark" id="url-input">
+                <input type="text" class="panel-control__input" id="url-input">
             </div>
             <!-- fondo -->
             <div class="panel-control">
@@ -77,14 +73,14 @@
                     FONDO
                 </h3>
                 <div class="panel-control-columns">
-                    <div class="panel-control-column flex-container panel-control__input--dark panel-control__input">
+                    <div class="panel-control-column flex-container panel-control__input">
                         <input type="color" name="" id="color-picker">
                         <span class="panel-value__color" id="color-name">
                             #FFFFF
                         </span>
                     </div>
                     <div class="panel-control-column">
-                        <select name="" id="" class="panel-control__input panel-control__input--dark">
+                        <select name="" id="" class="panel-control__input">
                             <option value="">
                                 Ninguno
                             </option>
@@ -167,13 +163,13 @@
                     <input type="range" name="" id="invert-input" min="0" max="1" value="1" step="0.1">
                 </div>
             </div>
-            <button class="button__reset panel-control__input--dark">
+            <button class="button__reset">
                 Reestablecer filtros
             </button>
         </section>
     </aside>
-    <aside class="hidden panel" id="panel-text">
-        <button class="panel__close panel__close--dark">
+    <aside class="panel" id="panel-text">
+        <button class="panel__close">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section>
@@ -185,11 +181,11 @@
                 <h3 class="control__title">
                     SUPERIOR
                 </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--dark">
+                <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
                     TOP TEXT
                 </textarea>
                 <div class="flex-container panel-control__checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="top-text">
                     <label for="">
                         Sin texto superior
                     </label>
@@ -200,11 +196,11 @@
                 <h3 class="control__title">
                     INFERIOR
                 </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input panel-control__input--dark">
-                    TOP TEXT
+                <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
+                    BOTTOM TEXT
                 </textarea>
                 <div class="flex-container panel-control__checkbox">
-                    <input type="checkbox">
+                    <input type="checkbox" id="bottom-text">
                     <label for="">
                         Sin texto inferior
                     </label>
@@ -216,7 +212,7 @@
                     FUENTE
                 </h3>
                 <!-- familia de fuente -->
-                <select name="" id="" class="panel-control__input panel-control__input--dark">
+                <select name="" id="" class="panel-control__input">
                     <option value="">
                         Arial
                     </option>
@@ -247,16 +243,16 @@
                 </select>
                 <div class="flex-container">
                     <!-- tamaño de letra -->
-                    <input type="number" name="" id="" class="panel-control__input panel-control__input--dark">
+                    <input type="number" name="" id="" class="panel-control__input">
                     <!-- alineacion del texto -->
                     <div class="buttons-container">
-                        <button class="button panel-control__input panel-control__input--dark">
+                        <button class="button panel-control__input">
                             <i class="fa-solid fa-align-left"></i>
                         </button>
-                        <button class="button panel-control__input panel-control__input--dark">
+                        <button class="button panel-control__input">
                             <i class="fa-solid fa-align-center"></i>
                         </button>
-                        <button class="button panel-control__input panel-control__input--dark">
+                        <button class="button panel-control__input">
                             <i class="fa-solid fa-align-right"></i>
                         </button>
                     </div>
@@ -269,7 +265,7 @@
                         <h3 class="control__title">
                             COLOR
                         </h3>
-                        <div class="flex-container panel-control__input panel-control__input--dark">
+                        <div class="flex-container panel-control__input">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #000000
@@ -281,7 +277,7 @@
                         <h3 class="control__title">
                             FONDO
                         </h3>
-                        <div class="flex-container panel-control__input panel-control__input--dark">
+                        <div class="flex-container panel-control__input">
                             <input type="color" name="" id="">
                             <span class="panel-value__color">
                                 #FFFFFF
@@ -302,13 +298,13 @@
                     CONTORNO
                 </h3>
                 <div class="buttons-container">
-                    <button class="button panel-control__input panel-control__input--dark">
+                    <button class="button panel-control__input">
                         Ninguno
                     </button>
-                    <button class="button panel-control__input panel-control__input--dark">
+                    <button class="button panel-control__input">
                         Claro
                     </button>
-                    <button class="button panel-control__input panel-control__input--dark">
+                    <button class="button panel-control__input">
                         Oscuro
                     </button>
                 </div>
@@ -318,14 +314,14 @@
                 <h3 class="control__title">
                     ESPACIADO
                 </h3>
-                <input type="number" name="" id="" class="panel-control__input panel-control__input--dark">
+                <input type="number" name="" id="" class="panel-control__input">
             </div>
             <!-- INTERLINEADO -->
             <div class="panel-control">
                 <h3 class="control__title">
                     INTERLINEADO
                 </h3>
-                <select name="" id="" class="panel-control__input panel-control__input--dark">
+                <select name="" id="" class="panel-control__input">
                     <option value="">
                         0.8
                     </option>
