@@ -141,3 +141,46 @@ const hideBottomText = () => {
         bottomText.classList.remove(`hidden`);   
     }
 }
+
+//********************************
+//boton de descarga del meme
+//********************************
+
+// const btnDescargarMeme = document.getElementById(`btn-descargar`);
+
+// btnDescargarMeme.addEventListener(`click`, () => DescargarMeme());
+
+// const DescargarMeme = () => {
+//     domtoimage.toBlob(meme).then(function (blob) {
+//     window.saveAs(blob, "mi-meme.png");
+//     });
+// };
+
+const downloadButton = document.getElementById("download-btn");
+
+downloadButton.addEventListener("click", () => downloadMeme());
+
+const downloadMeme = () => {
+    domtoimage.toBlob(meme).then(function (blob) {
+    window.saveAs(blob, "mi-meme.png");
+    });
+};
+
+//no funciona el btn descargar meme
+
+//********************************
+//tomar el valor del input select
+//********************************
+
+const fontSelector = document.getElementById(`font-selector`);
+console.log(fontSelector.value);
+
+fontSelector.addEventListener("change", () => changeFontFamily());
+
+const changeFontFamily = () => {
+    topText.style.fontFamily = `${fontSelector.value}`;
+    console.log(fontSelector.value);
+    bottomText.style.fontFamily = `${fontSelector.value}`;
+};
+
+
