@@ -117,11 +117,27 @@ const changeMode = () => {
 //tomar valor del input type checkbox
 //********************************
 
-const topText = document.getElementById("top-text");
+const topTextInput = document.getElementById("top-text-input");
+const bottomTextInput = document.getElementById("bottom-text-input");
 const bottomText = document.getElementById("bottom-text");
+const topText = document.getElementById("top-text");
 
-topText.addEventListener(`change`, hideTopText());
-bottomText.addEventListener(`change`, hideBottomText());
+topTextInput.addEventListener(`change`, () => hideTopText());
+bottomTextInput.addEventListener(`change`, () => hideBottomText());
 
+const hideTopText = () => {
+    if (topTextInput.checked) {
+        topText.classList.add(`hidden`);    
+    } else {
+        topText.classList.remove(`hidden`);   
+    }
+}
 
-
+const hideBottomText = () => {
+    //checked devuelve true o false si el input checkbox esta marcado
+    if (bottomTextInput.checked) {
+        bottomText.classList.add(`hidden`);    
+    } else {
+        bottomText.classList.remove(`hidden`);   
+    }
+}
