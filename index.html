@@ -10,10 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 </head>
 <body>
     <div class="container">
@@ -56,8 +64,8 @@
             </button>
         </main>
     </div>
-    <aside class="hidden panel" id="panel-img">
-        <button class="panel__close">
+    <aside class="panel" id="panel-img">
+        <button class="panel__close" id="btn-close-img">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section class="panel-imagen">
@@ -84,23 +92,23 @@
                         </span>
                     </div>
                     <div class="panel-control-column">
-                        <select name="" id="" class="panel-control__input">
-                            <option value="">
+                        <select name="" id="filter-selector" class="panel-control__input">
+                            <option value="unset">
                                 Ninguno
                             </option>
-                            <option value="">
+                            <option value="lighten">
                                 Aclarar
                             </option>
-                            <option value="">
+                            <option value="darken">
                                 Oscurecer
                             </option>
-                            <option value="">
+                            <option value="difference">
                                 Diferencia 
                             </option>
-                            <option value="">
+                            <option value="luminosity">
                                 Luminocidad
                             </option>
-                            <option value="">
+                            <option value="multiply">
                                 Multiplicar
                             </option>
                         </select>
@@ -164,16 +172,16 @@
                     <label for="" class="invert-slider">
                         NEGATIVO
                     </label>
-                    <input type="range" name="" id="invert-input" min="0" max="1" value="1" step="0.1">
+                    <input type="range" name="" id="invert-input" min="0" max="1" value="0" step="0.1">
                 </div>
             </div>
-            <button class="button__reset">
+            <button class="button__reset" id="btn-reset">
                 Reestablecer filtros
             </button>
         </section>
     </aside>
     <aside class="panel" id="panel-text">
-        <button class="panel__close">
+        <button class="panel__close" id="btn-close-text">
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section>

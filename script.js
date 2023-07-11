@@ -21,7 +21,6 @@ const changeBackground = () => {
 //intercambiar un aside con el otro con los botones texto e imagen
 //********************************
 
-
 const btnText = document.getElementById(`btn-text`); //trae el boton para activar el aside texto
 const btnImg = document.getElementById(`btn-img`); //trae el boton para activar el aside img
 
@@ -72,7 +71,7 @@ invertInput.addEventListener(`input`, (e) => filtros(e));
 // para ver cambiar el valor del input
 
 //********************************
-//tomar valor del input type color
+//tomar valor del input type color y cambiar fondo del contendor meme
 //********************************
 
 const colorPicker = document.getElementById("color-picker");
@@ -83,6 +82,7 @@ const cambiarFondoMeme = () => {
     let colorElegido = colorPicker.value;
     //si queremos insertar texto usamos:
     colorName.innerHTML = `${colorElegido}`;
+    imgMeme.style.backgroundColor = `${colorElegido}`;
 };
 
 colorPicker.addEventListener("input", () => cambiarFondoMeme());
@@ -146,30 +146,18 @@ const hideBottomText = () => {
 //boton de descarga del meme
 //********************************
 
-// const btnDescargarMeme = document.getElementById(`btn-descargar`);
-
-// btnDescargarMeme.addEventListener(`click`, () => DescargarMeme());
-
-// const DescargarMeme = () => {
-//     domtoimage.toBlob(meme).then(function (blob) {
-//     window.saveAs(blob, "mi-meme.png");
-//     });
-// };
-
 const downloadButton = document.getElementById("download-btn");
 
-downloadButton.addEventListener("click", () => downloadMeme());
+downloadButton.addEventListener(`click`, () => downloadMeme());
 
 const downloadMeme = () => {
-    domtoimage.toBlob(meme).then(function (blob) {
+    domtoimage.toBlob(imgMeme).then(function (blob) {
     window.saveAs(blob, "mi-meme.png");
     });
 };
 
-//no funciona el btn descargar meme
-
 //********************************
-//tomar el valor del input select
+//tomar el valor del input select para filtros y fuentes
 //********************************
 
 const fontSelector = document.getElementById(`font-selector`);
@@ -183,4 +171,40 @@ const changeFontFamily = () => {
     bottomText.style.fontFamily = `${fontSelector.value}`;
 };
 
+const filterSelector = document.getElementById(`filter-selector`);
 
+filterSelector.addEventListener("change", () => changeFilter());
+
+const changeFilter = () => {
+    imgMeme.style.mixBlendMode = `${filterSelector.value}`;
+};
+
+//********************************
+//boton para quitar el panel de text o img
+//********************************
+
+const BtnCloseImg = document.getElementById(`btn-close-img`);
+const BtnCloseText = document.getElementById(`btn-close-text`);
+
+BtnCloseImg.addEventListener(`click`, () => ClosePanelImg());
+BtnCloseText.addEventListener(`click`, () => ClosePanelText());
+
+const ClosePanelImg = () => {
+    panelImg.classList.toggle(`hidden`);
+}
+
+const ClosePanelText = () => {
+    panelText.classList.toggle(`hidden`);
+}
+
+//********************************
+// reestablecer filtros 
+//********************************
+
+const btnResetFilter = document.getElementById(`btn-reset`);
+
+btnResetFilter.addEventListener(`click`, () => reestrablecerFiltros())
+
+const reestrablecerFiltros = () => {
+    imgMeme.style.filter = `brightness(${brightInput.value = 1}) opacity(${opacityInput.value = 1}) blur(${blurInput.value = 0}px) contrast(${contrastInput.value = 100}%) grayscale(${grayscaleInput.value = 0}%) hue-rotate(${hueInput.value = 0}deg) sepia(${sepiaInput.value = 0}%) saturate(${saturatedInput.value = 100}%) invert(${invertInput.value = 0})`;
+}
