@@ -1,21 +1,6 @@
 //********************************
-// toma la url y la convierte en el fondo del meme
+//**************** ASIDE IMAGEN ****************
 //********************************
-
-// Problema: a medida que se achica el ancho o alto corta la imagen
-
-const imgMeme = document.getElementById(`img-meme`);
-const urlInput = document.getElementById(`url-input`);
-
-urlInput.addEventListener(`input`, () => changeBackground());
-
-const changeBackground = () => {
-    imgMeme.style.backgroundImage = `url("${urlInput.value}")`;
-    imgMeme.style.backgroundRepeat= `no-repeat`;
-    imgMeme.style.backgroundSize = `cover`;
-    imgMeme.style.backgroundPosition = `center`;
-}
-
 
 //********************************
 //intercambiar un aside con el otro con los botones texto e imagen
@@ -41,7 +26,97 @@ const hidenImgAside = () => {
 }
 
 //********************************
-//tomar valor del input type range 
+//cambiar a modo oscuro los asides y modificar el button para cambiar los modos
+//********************************
+const mainContainer = document.getElementById("container-main");
+const header = document.getElementById("header");
+const inputDark = document.getElementsByClassName(`panel-control__input`);
+const modeButton = document.getElementById("mode-btn");
+
+modeButton.addEventListener("click", () => changeMode());
+
+const changeMode = () => {
+    //toggle realiza la funcion y su viceversa
+    panelText.classList.toggle(`panel--dark`)
+    mainContainer.classList.toggle(`container-main--dark`)
+    header.classList.toggle(`header--dark`);
+    inputDark[5].classList.toggle(`panel-control__input--dark`);
+
+    //contains es como include
+    if (mainContainer.classList.contains("container-main--dark")) {
+        // con el innerhtml podemos agregar etiquetas
+        modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
+    } else {
+        modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
+    }
+}
+
+//********************************
+//boton para quitar el panel de text o img
+//********************************
+
+const BtnCloseImg = document.getElementById(`btn-close-img`);
+const BtnCloseText = document.getElementById(`btn-close-text`);
+
+BtnCloseImg.addEventListener(`click`, () => ClosePanelImg());
+BtnCloseText.addEventListener(`click`, () => ClosePanelText());
+
+const ClosePanelImg = () => {
+    panelImg.classList.toggle(`hidden`);
+}
+
+const ClosePanelText = () => {
+    panelText.classList.toggle(`hidden`);
+}
+
+//********************************
+// toma la url y la convierte en el fondo del meme
+//********************************
+// Problema: a medida que se achica el ancho o alto corta la imagen
+
+const imgMeme = document.getElementById(`img-meme`);
+const urlInput = document.getElementById(`url-input`);
+
+urlInput.addEventListener(`input`, () => changeBackground());
+
+const changeBackground = () => {
+    imgMeme.style.backgroundImage = `url("${urlInput.value}")`;
+    imgMeme.style.backgroundRepeat= `no-repeat`;
+    imgMeme.style.backgroundSize = `cover`;
+    imgMeme.style.backgroundPosition = `center`;
+}
+
+//********************************
+//tomar valor del input type color y cambiar fondo del contendor meme
+//********************************
+
+const colorPicker = document.getElementById("color-picker");
+const colorName = document.getElementById("color-name");
+
+//suponiendo que tenemos la sig. funcion:
+const cambiarFondoMeme = () => {
+    let colorElegido = colorPicker.value;
+    //si queremos insertar texto usamos:
+    colorName.innerHTML = `${colorElegido}`;
+    imgMeme.style.backgroundColor = `${colorElegido}`;
+};
+
+colorPicker.addEventListener("input", () => cambiarFondoMeme());
+
+//********************************
+//tomar valor del input select del blend mode
+//********************************
+
+const filterSelector = document.getElementById(`filter-selector`);
+
+filterSelector.addEventListener("change", () => changeFilter());
+
+const changeFilter = () => {
+    imgMeme.style.mixBlendMode = `${filterSelector.value}`;
+};
+
+//********************************
+//tomar valor del input type range de filtros
 //********************************
 
 const brightInput = document.getElementById(`bright-input`); // BRILLO
@@ -71,47 +146,20 @@ invertInput.addEventListener(`input`, (e) => filtros(e));
 // para ver cambiar el valor del input
 
 //********************************
-//tomar valor del input type color y cambiar fondo del contendor meme
+// input para reestablecer filtros 
 //********************************
 
-const colorPicker = document.getElementById("color-picker");
-const colorName = document.getElementById("color-name");
+const btnResetFilter = document.getElementById(`btn-reset`);
 
-//suponiendo que tenemos la sig. funcion:
-const cambiarFondoMeme = () => {
-    let colorElegido = colorPicker.value;
-    //si queremos insertar texto usamos:
-    colorName.innerHTML = `${colorElegido}`;
-    imgMeme.style.backgroundColor = `${colorElegido}`;
-};
+btnResetFilter.addEventListener(`click`, () => reestrablecerFiltros())
 
-colorPicker.addEventListener("input", () => cambiarFondoMeme());
-
-//********************************
-//cambiar a modo oscuro los asides y modificar el button para cambiar los modos
-//********************************
-const mainContainer = document.getElementById("container-main");
-const header = document.getElementById("header");
-const inputDark = document.getElementsByClassName(`panel-control__input`);
-const modeButton = document.getElementById("mode-btn");
-
-modeButton.addEventListener("click", () => changeMode());
-
-const changeMode = () => {
-    //toggle realiza la funcion y su viceversa
-    panelText.classList.toggle(`panel--dark`)
-    mainContainer.classList.toggle(`container-main--dark`)
-    header.classList.toggle(`header--dark`);
-    inputDark[5].classList.toggle(`panel-control__input--dark`);
-
-    //contains es como include
-    if (mainContainer.classList.contains("container-main--dark")) {
-        // con el innerhtml podemos agregar etiquetas
-        modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
-    } else {
-        modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
-    }
+const reestrablecerFiltros = () => {
+    imgMeme.style.filter = `brightness(${brightInput.value = 1}) opacity(${opacityInput.value = 1}) blur(${blurInput.value = 0}px) contrast(${contrastInput.value = 100}%) grayscale(${grayscaleInput.value = 0}%) hue-rotate(${hueInput.value = 0}deg) sepia(${sepiaInput.value = 0}%) saturate(${saturatedInput.value = 100}%) invert(${invertInput.value = 0})`;
 }
+
+//********************************
+//**************** ASIDE TEXTO ****************
+//********************************
 
 //********************************
 //tomar valor del input type checkbox
@@ -143,6 +191,19 @@ const hideBottomText = () => {
 }
 
 //********************************
+//tomar el valor del input select de fuentes
+//********************************
+
+const fontSelector = document.getElementById(`font-selector`);
+
+fontSelector.addEventListener("change", () => changeFontFamily());
+
+const changeFontFamily = () => {
+    topText.style.fontFamily = `${fontSelector.value}`;
+    bottomText.style.fontFamily = `${fontSelector.value}`;
+};
+
+//********************************
 //boton de descarga del meme
 //********************************
 
@@ -156,55 +217,3 @@ const downloadMeme = () => {
     });
 };
 
-//********************************
-//tomar el valor del input select para filtros y fuentes
-//********************************
-
-const fontSelector = document.getElementById(`font-selector`);
-console.log(fontSelector.value);
-
-fontSelector.addEventListener("change", () => changeFontFamily());
-
-const changeFontFamily = () => {
-    topText.style.fontFamily = `${fontSelector.value}`;
-    console.log(fontSelector.value);
-    bottomText.style.fontFamily = `${fontSelector.value}`;
-};
-
-const filterSelector = document.getElementById(`filter-selector`);
-
-filterSelector.addEventListener("change", () => changeFilter());
-
-const changeFilter = () => {
-    imgMeme.style.mixBlendMode = `${filterSelector.value}`;
-};
-
-//********************************
-//boton para quitar el panel de text o img
-//********************************
-
-const BtnCloseImg = document.getElementById(`btn-close-img`);
-const BtnCloseText = document.getElementById(`btn-close-text`);
-
-BtnCloseImg.addEventListener(`click`, () => ClosePanelImg());
-BtnCloseText.addEventListener(`click`, () => ClosePanelText());
-
-const ClosePanelImg = () => {
-    panelImg.classList.toggle(`hidden`);
-}
-
-const ClosePanelText = () => {
-    panelText.classList.toggle(`hidden`);
-}
-
-//********************************
-// reestablecer filtros 
-//********************************
-
-const btnResetFilter = document.getElementById(`btn-reset`);
-
-btnResetFilter.addEventListener(`click`, () => reestrablecerFiltros())
-
-const reestrablecerFiltros = () => {
-    imgMeme.style.filter = `brightness(${brightInput.value = 1}) opacity(${opacityInput.value = 1}) blur(${blurInput.value = 0}px) contrast(${contrastInput.value = 100}%) grayscale(${grayscaleInput.value = 0}%) hue-rotate(${hueInput.value = 0}deg) sepia(${sepiaInput.value = 0}%) saturate(${saturatedInput.value = 100}%) invert(${invertInput.value = 0})`;
-}
