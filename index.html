@@ -69,115 +69,118 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section class="panel-imagen">
-            <h2 class="panel__title">
-                IMAGEN
-            </h2>
-            <!-- imagen -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    URL
-                </h3>
-                <input type="text" class="panel-control__input" id="url-input">
-            </div>
-            <!-- fondo -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    FONDO
-                </h3>
-                <div class="panel-control-columns">
-                    <div class="panel-control-column flex-container panel-control__input">
-                        <input type="color" name="" id="color-picker">
-                        <span class="panel-value__color" id="color-name">
-                            #FFFFF
-                        </span>
+            <form action="">
+                <h2 class="panel__title">
+                    IMAGEN
+                </h2>
+                <!-- URL DE IMAGEN -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        URL
+                    </legend>
+                    <input type="text" class="panel-control__input" id="url-input">
+                </fieldset>
+                <!-- FONDO DE IMG-->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        FONDO
+                    </legend>
+                    <div class="panel-control-columns">
+                        <div class="panel-control-column flex-container panel-control__input">
+                            <input type="color" name="" id="color-picker">
+                            <span class="panel-value__color" id="color-name">
+                                #FFFFF
+                            </span>
+                        </div>
+                        <div class="panel-control-column">
+                            <select name="" id="filter-selector" class="panel-control__input">
+                                <option value="unset">
+                                    Ninguno
+                                </option>
+                                <option value="lighten">
+                                    Aclarar
+                                </option>
+                                <option value="darken">
+                                    Oscurecer
+                                </option>
+                                <option value="difference">
+                                    Diferencia 
+                                </option>
+                                <option value="luminosity">
+                                    Luminocidad
+                                </option>
+                                <option value="multiply">
+                                    Multiplicar
+                                </option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="panel-control-column">
-                        <select name="" id="filter-selector" class="panel-control__input">
-                            <option value="unset">
-                                Ninguno
-                            </option>
-                            <option value="lighten">
-                                Aclarar
-                            </option>
-                            <option value="darken">
-                                Oscurecer
-                            </option>
-                            <option value="difference">
-                                Diferencia 
-                            </option>
-                            <option value="luminosity">
-                                Luminocidad
-                            </option>
-                            <option value="multiply">
-                                Multiplicar
-                            </option>
-                        </select>
+                </fieldset>
+                <!-- FILTROS DE IMG -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        FILTROS
+                    </legend>
+                    <div class="control-slider">
+                        <label for="bright-input" class="brightness-slider">
+                            BRILLO
+                        </label>
+                        <input type="range" name="bright-input" id="bright-input" min="0" max="1" value="1" step="0.1">
                     </div>
-                </div>
-            </div>
-            <!-- flitros -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    FILTROS
-                </h3>
-                <div class="control-slider">
-                    <label for="" class="brightness-slider">
-                        BRILLO
-                    </label>
-                    <input type="range" name="" id="bright-input" min="0" max="1" value="1" step="0.1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="opacity-slider">
-                        OPACIDAD
-                    </label>
-                    <input type="range" name="" id="opacity-input" min="0" max="1" value="1" step="0.1"> 
-                </div>
-                <div class="control-slider">
-                    <label for="" class="contrast-slider">
-                        CONTRASTE
-                    </label>
-                    <input type="range" name="" id="contrast-input" min="100" max="1000" value="100" step="1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="blur-slider">
-                        DESENFOQUE
-                    </label>
-                    <input type="range" name="" id="blur-input" min="0" max="10" value="0" step="0.1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="grayscale-slider">
-                        ESCALA DE GRISES
-                    </label>
-                    <input type="range" name="" id="grayscale-input" min="0" max="100" value="0" step="1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="sepia-slider">
-                        SEPIA
-                    </label>
-                    <input type="range" name="" id="sepia-input" min="0" max="100" value="0" step="1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="hue-slider">
-                        HUE
-                    </label>
-                    <input type="range" name="" id="hue-input" min="0" max="359" value="0" step="1">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="saturated-slider">
-                        SATURADO
-                    </label>
-                    <input type="range" name="" id="saturation-input" min="100" max="1000" value="100" step="10">
-                </div>
-                <div class="control-slider">
-                    <label for="" class="invert-slider">
-                        NEGATIVO
-                    </label>
-                    <input type="range" name="" id="invert-input" min="0" max="1" value="0" step="0.1">
-                </div>
-            </div>
-            <button class="button__reset" id="btn-reset">
-                Reestablecer filtros
-            </button>
+                    <div class="control-slider">
+                        <label for="opacity-input" class="opacity-slider">
+                            OPACIDAD
+                        </label>
+                        <input type="range" name="opacity-input" id="opacity-input" min="0" max="1" value="1" step="0.1"> 
+                    </div>
+                    <div class="control-slider">
+                        <label for="contrast-input" class="contrast-slider">
+                            CONTRASTE
+                        </label>
+                        <input type="range" name="contrast-input" id="contrast-input" min="100" max="1000" value="100" step="1">
+                    </div>
+                    <div class="control-slider">
+                        <label for="blur-input" class="blur-slider">
+                            DESENFOQUE
+                        </label>
+                        <input type="range" name="blur-input" id="blur-input" min="0" max="10" value="0" step="0.1">
+                    </div>
+                    <div class="control-slider">
+                        <label for="grayscale-input" class="grayscale-slider">
+                            ESCALA DE GRISES
+                        </label>
+                        <input type="range" name="grayscale-input" id="grayscale-input" min="0" max="100" value="0" step="1">
+                    </div>
+                    <div class="control-slider">
+                        <label for="sepia-input" class="sepia-slider">
+                            SEPIA
+                        </label>
+                        <input type="range" name="sepia-input" id="sepia-input" min="0" max="100" value="0" step="1">
+                    </div>
+                    <div class="control-slider">
+                        <label for="hue-input" class="hue-slider">
+                            HUE
+                        </label>
+                        <input type="range" name="hue-input" id="hue-input" min="0" max="359" value="0" step="1">
+                    </div>
+                    <div class="control-slider">
+                        <label for="saturation-input" class="saturated-slider">
+                            SATURADO
+                        </label>
+                        <input type="range" name="saturation-input" id="saturation-input" min="100" max="1000" value="100" step="10">
+                    </div>
+                    <div class="control-slider">
+                        <label for="invert-input" class="invert-slider">
+                            NEGATIVO
+                        </label>
+                        <input type="range" name="invert-input" id="invert-input" min="0" max="1" value="0" step="0.1">
+                    </div>
+                </fieldset>
+                <!-- BOTON PARA REESTABLECER FILTROS -->
+                <button class="button__reset" id="btn-reset">
+                    Reestablecer filtros
+                </button>
+            </form>
         </section>
     </aside>
     <aside class="panel" id="panel-text">
@@ -185,175 +188,181 @@
             <i class="fa-solid fa-xmark"></i>
         </button>
         <section>
-            <h2 class="panel__title">
-                TEXTO
-            </h2>
-            <!-- TEXTO SUPERIOR -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    SUPERIOR
-                </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
-                    TOP TEXT
-                </textarea>
-                <div class="flex-container panel-control__checkbox">
-                    <input type="checkbox" id="top-text-input">
-                    <label for="">
-                        Sin texto superior
-                    </label>
-                </div>
-            </div>
-            <!-- TEXTO INFERIOR -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    INFERIOR
-                </h3>
-                <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
-                    BOTTOM TEXT
-                </textarea>
-                <div class="flex-container panel-control__checkbox">
-                    <input type="checkbox" id="bottom-text-input">
-                    <label for="">
-                        Sin texto inferior
-                    </label>
-                </div>
-            </div>
-            <!-- FUENTE -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    FUENTE
-                </h3>
-                <!-- familia de fuente -->
-                <select name="" id="font-selector" class="panel-control__input">
-                    <option value="Arial, Helvetica, sans-serif">
-                        Arial
-                    </option>
-                    <option value="">
-                        Arial Black
-                    </option>
-                    <option value="">
-                        American Typewriter
-                    </option>
-                    <option value="">
-                        Andale Mono
-                    </option>
-                    <option value="">
-                        Comic Sans MS
-                    </option>
-                    <option value="">
-                        Helvetica
-                    </option>
-                    <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
-                        Impact
-                    </option>
-                    <option value="Verdana, Geneva, Tahoma, sans-serif">
-                        Verdana
-                    </option>
-                    <option value="Times New Roman', Times, serif">
-                        Times New Roman
-                    </option>
-                </select>
-                <div class="flex-container">
-                    <!-- tamaño de letra -->
-                    <input type="number" name="" id="" class="panel-control__input">
-                    <!-- alineacion del texto -->
+            <form action="">
+                <h2 class="panel__title">
+                    TEXTO
+                </h2>
+                <!-- TEXTO SUPERIOR -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        SUPERIOR
+                    </legend>
+                    <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
+                        TOP TEXT
+                    </textarea>
+                    <div class="flex-container panel-control__checkbox">
+                        <input type="checkbox" id="top-text-input">
+                        <label for="top-text-input">
+                            Sin texto superior
+                        </label>
+                    </div>
+                </fieldset>
+                <!-- TEXTO INFERIOR -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        INFERIOR
+                    </legend>
+                    <textarea name="" id="" cols="30" rows="10" class="panel-control__input">
+                        BOTTOM TEXT
+                    </textarea>
+                    <div class="flex-container panel-control__checkbox">
+                        <input type="checkbox" id="bottom-text-input">
+                        <label for="bottom-text-input">
+                            Sin texto inferior
+                        </label>
+                    </div>
+                </fieldset>
+                <!-- FUENTE -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        FUENTE
+                    </legend>
+                    <!-- Familia de fuentes -->
+                    <select name="" id="font-selector" class="panel-control__input">
+                        <option value="Arial, Helvetica, sans-serif">
+                            Arial
+                        </option>
+                        <option value="">
+                            Arial Black
+                        </option>
+                        <option value="">
+                            American Typewriter
+                        </option>
+                        <option value="">
+                            Andale Mono
+                        </option>
+                        <option value="">
+                            Comic Sans MS
+                        </option>
+                        <option value="">
+                            Helvetica
+                        </option>
+                        <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">
+                            Impact
+                        </option>
+                        <option value="Verdana, Geneva, Tahoma, sans-serif">
+                            Verdana
+                        </option>
+                        <option value="Times New Roman', Times, serif">
+                            Times New Roman
+                        </option>
+                    </select>
+                    <div class="flex-container">
+                        <!-- tamaño de letra -->
+                        <input type="number" name="" id="" class="panel-control__input">
+                        <!-- alineacion del texto -->
+                        <div class="buttons-container">
+                            <button class="button panel-control__input">
+                                <i class="fa-solid fa-align-left"></i>
+                            </button>
+                            <button class="button panel-control__input">
+                                <i class="fa-solid fa-align-center"></i>
+                            </button>
+                            <button class="button panel-control__input">
+                                <i class="fa-solid fa-align-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- COLOR DE LETRA Y FONDO DEL TEXTO DEL MEME -->
+                <fieldset>
+                    <div class="panel-control">
+                        <div class="panel-control-columns">
+                            <!-- COLOR DEL TEXTO DEL MEME -->
+                            <div class="panel-control-column">
+                                <h3 class="control__title">
+                                    COLOR
+                                </h3>
+                                <div class="flex-container panel-control__input">
+                                    <input type="color" name="" id="">
+                                    <span class="panel-value__color">
+                                        #000000
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- COLOR DE FONDO DEL TEXTO DEL MEME -->
+                            <div class="panel-control-column">
+                                <h3 class="control__title">
+                                    FONDO
+                                </h3>
+                                <div class="flex-container panel-control__input">
+                                    <input type="color" name="" id="">
+                                    <span class="panel-value__color">
+                                        #FFFFFF
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BOTON PARA FONDO TRANSPARENTE EN EL TEXTO DEL MEME -->
+                        <div class="flex-container panel-control__checkbox">
+                            <input type="checkbox" name="" id="">
+                            <label for="">
+                                Fondo transparente
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+                <!-- CONTORNO -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        CONTORNO
+                    </legend>
                     <div class="buttons-container">
                         <button class="button panel-control__input">
-                            <i class="fa-solid fa-align-left"></i>
+                            Ninguno
                         </button>
                         <button class="button panel-control__input">
-                            <i class="fa-solid fa-align-center"></i>
+                            Claro
                         </button>
                         <button class="button panel-control__input">
-                            <i class="fa-solid fa-align-right"></i>
+                            Oscuro
                         </button>
                     </div>
-                </div>
-            </div>
-            <div class="panel-control">
-                <div class="panel-control-columns">
-                    <!-- COLOR DE TEXTO -->
-                    <div class="panel-control-column">
-                        <h3 class="control__title">
-                            COLOR
-                        </h3>
-                        <div class="flex-container panel-control__input">
-                            <input type="color" name="" id="">
-                            <span class="panel-value__color">
-                                #000000
-                            </span>
-                        </div>
-                    </div>
-                    <!-- COLOR DE FONDO -->
-                    <div class="panel-control-column">
-                        <h3 class="control__title">
-                            FONDO
-                        </h3>
-                        <div class="flex-container panel-control__input">
-                            <input type="color" name="" id="">
-                            <span class="panel-value__color">
-                                #FFFFFF
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-container panel-control__checkbox">
-                    <input type="checkbox" name="" id="">
-                    <label for="">
-                        Fondo transparente
-                    </label>
-                </div>
-            </div>
-            <!-- CONTORNO -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    CONTORNO
-                </h3>
-                <div class="buttons-container">
-                    <button class="button panel-control__input">
-                        Ninguno
-                    </button>
-                    <button class="button panel-control__input">
-                        Claro
-                    </button>
-                    <button class="button panel-control__input">
-                        Oscuro
-                    </button>
-                </div>
-            </div>
-            <!-- ESPACIADO -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    ESPACIADO
-                </h3>
-                <input type="number" name="" id="" class="panel-control__input">
-            </div>
-            <!-- INTERLINEADO -->
-            <div class="panel-control">
-                <h3 class="control__title">
-                    INTERLINEADO
-                </h3>
-                <select name="" id="" class="panel-control__input">
-                    <option value="">
-                        0.8
-                    </option>
-                    <option value="">
-                        1
-                    </option>
-                    <option value="">
-                        1.2
-                    </option>
-                    <option value="">
-                        1.5
-                    </option>
-                    <option value="">
-                        2
-                    </option>
-                    <option value="">
-                        2.5
-                    </option>
-                </select>
-            </div>
+                </fieldset>
+                <!-- ESPACIADO -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        ESPACIADO
+                    </legend>
+                    <input type="number" name="" id="" class="panel-control__input">
+                </fieldset>
+                <!-- INTERLINEADO -->
+                <fieldset class="panel-control">
+                    <legend class="control__title">
+                        INTERLINEADO
+                    </legend>
+                    <select name="" id="" class="panel-control__input">
+                        <option value="0.8">
+                            0.8
+                        </option>
+                        <option value="1">
+                            1
+                        </option>
+                        <option value="1.2">
+                            1.2
+                        </option>
+                        <option value="1.5">
+                            1.5
+                        </option>
+                        <option value="2">
+                            2
+                        </option>
+                        <option value="2.5">
+                            2.5
+                        </option>
+                    </select>
+                </fieldset>
+            </form>
         </section>
     </aside>
     <script src="script.js"></script>
