@@ -88,9 +88,11 @@ Estilos para el main
     max-width: 46%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .title__meme{
+    width: 100%;
     min-height: 12vh;
     font-size: 55rem;
     font-weight: 900;
@@ -101,6 +103,15 @@ Estilos para el main
     background-color:beige;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+}
+
+#top-text {
+    top: 0;
+}
+
+#bottom-text{
+    bottom: 0;
 }
 
 .content__meme {

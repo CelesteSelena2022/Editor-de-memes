@@ -304,3 +304,41 @@ const cambiarColorFondo = () => {
     topText.style.backgroundColor = `${colorDelFondo}`;
     bottomText.style.backgroundColor = `${colorDelFondo}`;
 }
+
+//********************************
+//agrega el fondo transparente al texto
+//********************************
+
+const FondoTransparente = document.getElementById(`checkbox-transparent`);
+
+FondoTransparente.addEventListener(`change`, () => FondoTransparenteText());
+
+const FondoTransparenteText = () => {
+    if (FondoTransparente.checked){
+        topText.style.backgroundColor = `transparent`;
+        bottomText.style.backgroundColor = `transparent`;
+    } else {
+        cambiarColorFondo()
+    }
+}
+
+//********************************
+//agrega el fondo transparente al texto
+//********************************
+
+const btnContornoNinguno = document.getElementById(`btn-contorno-ninguno`);
+const btnContornoClaro = document.getElementById(`btn-contorno-claro`);
+const btnContornoOscuro = document.getElementById(`btn-contorno-oscuro`);
+
+btnContornoNinguno.addEventListener(`click`, () => contornoText('0px'));
+btnContornoClaro.addEventListener(`click`, () => contornoText(`0.5px #FFF`));
+btnContornoOscuro.addEventListener(`click`, () => contornoText(`0.5px #000`));
+
+const contornoText = (contorno) => {
+    topText.style.webkitTextStroke = contorno;
+    bottomText.style.webkitTextStroke = contorno;
+}
+
+//********************************
+// espaciado para el texto
+//********************************
