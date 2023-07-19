@@ -93,7 +93,6 @@ const changeBackground = () => {
 const colorPicker = document.getElementById("color-picker");
 const colorName = document.getElementById("color-name");
 
-//suponiendo que tenemos la sig. funcion:
 const cambiarFondoMeme = () => {
     let colorElegido = colorPicker.value;
     //si queremos insertar texto usamos:
@@ -256,3 +255,52 @@ const ajustarTexto = () => {
 }
 
 window.addEventListener('resize', ajustarTexto);
+
+//********************************
+//cambia la alineacion del topText y bottomText
+//********************************
+
+const btnAlignStart = document.getElementById(`btn-align-start`);
+const btnAlignCenter = document.getElementById(`btn-align-center`);
+const btnAlignEnd = document.getElementById(`btn-align-end`);
+
+btnAlignStart.addEventListener(`click`, () => alinearTexto(`start`));
+btnAlignCenter.addEventListener(`click`, () => alinearTexto(`center`));
+btnAlignEnd.addEventListener(`click`, () => alinearTexto(`end`));
+
+alinearTexto = (align) => {
+topText.style.justifyContent = align;
+bottomText.style.justifyContent = align;
+}
+
+//********************************
+//cambia color del topText y bottomText
+//********************************
+
+const colorPickerTexto = document.getElementById(`color-picker-text`);
+const colorNameTexto = document.getElementById(`color-name-text`);
+
+colorPickerTexto.addEventListener("input", () => cambiarColorTexto());
+
+const cambiarColorTexto = () => {
+    let colorDelTexto = colorPickerTexto.value;
+    colorNameTexto.innerHTML = `${colorDelTexto}`;
+    topText.style.color = `${colorDelTexto}`;
+    bottomText.style.color = `${colorDelTexto}`;
+}
+
+//********************************
+//cambia el fondo del topText y bottomText
+//********************************
+
+const colorPickerFondo = document.getElementById(`color-picker-fondo`);
+const colorNameFondo = document.getElementById(`color-name-fondo`);
+
+colorPickerFondo.addEventListener("input", () => cambiarColorFondo());
+
+const cambiarColorFondo = () => {
+    let colorDelFondo = colorPickerFondo.value;
+    colorNameFondo.innerHTML = `${colorDelFondo}`;
+    topText.style.backgroundColor = `${colorDelFondo}`;
+    bottomText.style.backgroundColor = `${colorDelFondo}`;
+}

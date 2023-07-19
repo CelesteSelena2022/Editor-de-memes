@@ -94,6 +94,7 @@ Estilos para el main
     min-height: 12vh;
     font-size: 55rem;
     font-weight: 900;
+    padding: 0.2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,6 +105,7 @@ Estilos para el main
 
 .content__meme {
     flex-grow: 1;
+    background-color: black;
 }
 
 /**************************
@@ -333,5 +335,4 @@ MODO OSCURO
 
 .panel__close--dark {
     color: white;
-    font-family: Comic Sans MS, 
 }
