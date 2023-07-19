@@ -92,13 +92,14 @@ Estilos para el main
 
 .title__meme{
     min-height: 12vh;
-    font-size: 25rem;
+    font-size: 55rem;
     font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color:beige;
     color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .content__meme {
@@ -332,4 +333,5 @@ MODO OSCURO
 
 .panel__close--dark {
     color: white;
+    font-family: Comic Sans MS, 
 }

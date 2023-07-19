@@ -112,7 +112,7 @@ const filterSelector = document.getElementById(`filter-selector`);
 filterSelector.addEventListener("change", () => changeFilter());
 
 const changeFilter = () => {
-    imgMeme.style.mixBlendMode = `${filterSelector.value}`;
+    imgMeme.style.backgroundBlendMode = `${filterSelector.value}`;
 };
 
 //********************************
@@ -233,7 +233,7 @@ const changeFontFamily = () => {
 };
 
 //********************************
-//tomar el valor del input number para el tamaño del texto
+//tomar el valor del input number para el tamaño del texto y actualizar el tamaño a medida que la ventana del navegador cambie
 //********************************
 
 const inputFontSize = document.getElementById(`input-font-size`);
@@ -246,4 +246,13 @@ const actualizarFontSize = () => {
     bottomText.style.fontSize = `${medida}px`
 }
 
+const ajustarTexto = () => {
+    if (window.innerWidth > 1100) {
+        return
+    }
+    const tamanioTexto = Math.round((window.innerWidth / 10) * 0.5)
+    inputFontSize.value = tamanioTexto
+    actualizarFontSize();
+}
 
+window.addEventListener('resize', ajustarTexto);
