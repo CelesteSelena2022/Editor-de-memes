@@ -149,6 +149,10 @@ Estilos para el aside de IMAGEN
     margin-bottom: 1em;
 }
 
+fieldset {
+    border: transparent;
+}
+
 .panel-control {
     margin-bottom: 1em;
 }
@@ -172,7 +176,7 @@ Estilos para el aside de IMAGEN
     width: 100%;
 }
 
-.flex-container {
+.flex-container:not(.panel-control__checkbox) {
     display: flex;
     align-items: center;
     height: 36rem;
@@ -253,8 +257,8 @@ Comienzo de Estilos para el aside de TEXTO
 }
 
 .panel-control__checkbox{
-    margin-top: 0.8em;
     font-size: 12rem;
+    display: flex;
 }
 
 input[type="checkbox"] {

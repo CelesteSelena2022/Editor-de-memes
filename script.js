@@ -162,6 +162,35 @@ const reestrablecerFiltros = () => {
 //********************************
 
 //********************************
+//boton de descarga del meme
+//********************************
+
+const downloadButton = document.getElementById("download-btn");
+
+downloadButton.addEventListener(`click`, () => downloadMeme());
+
+const downloadMeme = () => {
+    domtoimage.toBlob(imgMeme).then(function (blob) {
+    window.saveAs(blob, "mi-meme.png");
+    });
+};
+
+//********************************
+// agregar el texto top y bottom al meme
+//********************************
+
+const topTextTextarea = document.getElementById(`top-text-textarea`);
+const bottomTextTextarea = document.getElementById(`bottom-text-textarea`);
+
+topTextTextarea.addEventListener(`input`, () => agregarText());
+bottomTextTextarea.addEventListener(`input`, () => agregarText());
+
+const agregarText = () => {
+    topText.innerHTML = `${topTextTextarea.value}`;
+    bottomText.innerHTML = `${bottomTextTextarea.value}`;
+}
+
+//********************************
 //tomar valor del input type checkbox
 //********************************
 
@@ -204,16 +233,17 @@ const changeFontFamily = () => {
 };
 
 //********************************
-//boton de descarga del meme
+//tomar el valor del input number para el tamaño del texto
 //********************************
 
-const downloadButton = document.getElementById("download-btn");
+const inputFontSize = document.getElementById(`input-font-size`);
 
-downloadButton.addEventListener(`click`, () => downloadMeme());
+inputFontSize.addEventListener(`click`, () => actualizarFontSize());
 
-const downloadMeme = () => {
-    domtoimage.toBlob(imgMeme).then(function (blob) {
-    window.saveAs(blob, "mi-meme.png");
-    });
-};
+const actualizarFontSize = () => {
+    let medida = inputFontSize.value
+    topText.style.fontSize = `${medida}px`
+    bottomText.style.fontSize = `${medida}px`
+}
+
 
