@@ -348,14 +348,12 @@ const InputEspaciado = document.getElementById(`input-espaciado`);
 InputEspaciado.addEventListener(`input`, () => crearEpaciado())
 
 crearEpaciado = () => {
-    topText.style.paddingTop = `${InputEspaciado.value}px`
-    topText.style.paddingBottom = `${InputEspaciado.value}px`
-    bottomText.style.paddingTop = `${InputEspaciado.value}px`
-    bottomText.style.paddingBottom = `${InputEspaciado.value}px`
+    topText.style.padding = `${InputEspaciado.value}px`
+    bottomText.style.padding = `${InputEspaciado.value}px`
 }
 
 //********************************
-// espaciado para el texto
+// interlineado para el texto
 //********************************
 
 const selectInterlineado = document.getElementById(`select-interlineado`);
