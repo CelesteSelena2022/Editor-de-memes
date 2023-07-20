@@ -14,7 +14,7 @@ body{
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /**************************
@@ -102,7 +102,7 @@ Estilos para el main
     background-color:beige;
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: absolute;
+    position: static;
     line-height: 1.2;
 }
 
@@ -141,7 +141,6 @@ Estilos para el aside de IMAGEN
 .panel {
     width: 260px;
     height: 100%;
-    overflow: auto;
     padding: 2em 1em;
     position: fixed;
     top: 0;
@@ -149,7 +148,8 @@ Estilos para el aside de IMAGEN
     z-index: 1;
     box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
     font-size: 14rem;
-    background-color: #ddb892
+    background-color: #ddb892;
+    overflow: auto;
 }
 
 .panel__close {
@@ -265,7 +265,6 @@ estilos para el circulo del input range
 /**************************
 Comienzo de Estilos para el aside de TEXTO
 ************************** */
-
 .panel textarea {
     height: 36rem;
 }

@@ -237,7 +237,7 @@ const changeFontFamily = () => {
 
 const inputFontSize = document.getElementById(`input-font-size`);
 
-inputFontSize.addEventListener(`click`, () => actualizarFontSize());
+inputFontSize.addEventListener(`input`, () => actualizarFontSize());
 
 const actualizarFontSize = () => {
     let medida = inputFontSize.value
@@ -315,15 +315,19 @@ FondoTransparente.addEventListener(`change`, () => FondoTransparenteText());
 
 const FondoTransparenteText = () => {
     if (FondoTransparente.checked){
+        topText.style.position = `absolute`;
+        bottomText.style.position = `absolute`;
         topText.style.backgroundColor = `transparent`;
         bottomText.style.backgroundColor = `transparent`;
     } else {
-        cambiarColorFondo()
+        topText.style.position = `static`;
+        bottomText.style.position = `static`;
+        cambiarColorFondo();
     }
 }
 
 //********************************
-//agrega el fondo transparente al texto
+//agrega contorno al texto
 //********************************
 
 const btnContornoNinguno = document.getElementById(`btn-contorno-ninguno`);
@@ -365,5 +369,17 @@ const CambiarInterlineado = () => {
     bottomText.style.lineHeight = `${selectInterlineado.value}`;
 }
 
+//********************************
+// redimensiona el contenedor del meme
+//********************************
 
+const containerMeme = document.getElementById(`container-meme`);
+
+    const ajustarImagen = () => {
+        containerMeme.style.height = `${
+        containerMeme.getBoundingClientRect().width
+        }px`
+    }
+
+    window.addEventListener('resize', () => ajustarImagen())
 
