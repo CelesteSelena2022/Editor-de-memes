@@ -305,70 +305,30 @@ input[type="checkbox"] {
 MODO OSCURO
 ************************** */
 
-/**************************
-intento 1, fallas: tengo que llamar a todos los input
-************************** */
-
-/* .header--dark {
+.modo-oscuro .header {
     background-color: #191e2b;
     color: white;
 }
 
-.container-main--dark {
+.modo-oscuro .container-main {
     background-color: #30343f;
-    color: white;
-} 
+    color: white
+}
 
-.panel--dark {
+.modo-oscuro .panel {
     background-color: #252935;
     color: white;
 }
 
-.panel-control__input--dark {
+/* botones del header */
+.modo-oscuro button {
+    color: white;
+}
+
+.modo-oscuro .panel-control__input{
     background-color: #393e49;
     color: white;
 }
-
-.header__button--dark {
-    color: white;
-}
-
-.panel__close--dark {
-    color: white;
-} */
-
-/**************************
-intento 2
-************************** */
-
-.modo-oscuro header {
-    background-color: #191e2b;
-    color: white;
-}
-
-/* .modo-oscuro .container-main--dark {
-    background-color: #30343f;
-    color: white;
-}
-
-.modo-oscuro .panel--dark {
-    background-color: #252935;
-    color: white;
-}
-
-.modo-oscuro .panel-control__input--dark {
-    background-color: #393e49;
-    color: white;
-}
-
-.modo-oscuro .header__button--dark {
-    color: white;
-}
-
-.modo-oscuro .panel__close--dark {
-    color: white;
-} */
-
 /**************************
 aplicacion de @media 
 ************************** */

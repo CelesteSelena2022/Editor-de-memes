@@ -26,32 +26,22 @@ const hidenTextAside = () => {
 }
 
 //********************************
-//cambiar a modo oscuro los asides y modificar el button para cambiar los modos
+//cambiar a modo oscuro y modificar el button para cambiar los modos
 //********************************
-//const mainContainer = document.getElementById("container-main");
-//const header = document.getElementById("header");
-//const inputDark = document.getElementsByClassName(`panel-control__input`);
 const modeButton = document.getElementById("mode-btn");
 const body = document.getElementById(`body`);
 
 modeButton.addEventListener(`click`, () => changeMode());
 
 const changeMode = () => {
-    body.classList.add = ".modo-oscuro";
+    body.classList.toggle(`modo-oscuro`);
+    if (body.classList.contains("modo-oscuro")) {
+    // con el innerhtml podemos agregar etiquetas
+    modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
+    } else {
+    modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
+    }
 }
-
-//primer intento de modo oscuro
-//const changeMode = () => {
-    //toggle realiza la funcion y su viceversa
-    //inputDark[5].classList.toggle(`panel-control__input--dark`);
-    //contains es como include
-    // if (mainContainer.classList.contains("container-main--dark")) {
-    //     // con el innerhtml podemos agregar etiquetas
-    //     modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
-    // } else {
-    //     modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
-    // }
-//}
 
 //********************************
 //boton para quitar el panel de text o img
