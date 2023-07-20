@@ -129,20 +129,19 @@ const saturatedInput = document.getElementById(`saturation-input`); // SATURADO
 const invertInput = document.getElementById(`invert-input`); // NEGATIVO
 
 
-const filtros = (e) => {
+const filtros = () => {
     imgMeme.style.filter = `brightness(${brightInput.value}) opacity(${opacityInput.value}) blur(${blurInput.value}px) contrast(${contrastInput.value}%) grayscale(${grayscaleInput.value}%) hue-rotate(${hueInput.value}deg) sepia(${sepiaInput.value}%) saturate(${saturatedInput.value}%) invert(${invertInput.value})`;
 }
 
-brightInput.addEventListener(`input`, (e) => filtros(e));
-opacityInput.addEventListener(`input`, (e) => filtros(e));
-contrastInput.addEventListener(`input`, (e) => filtros(e));
-blurInput.addEventListener(`input`, (e) => filtros(e));
-grayscaleInput.addEventListener(`input`, (e) => filtros(e));
-sepiaInput.addEventListener(`input`, (e) => filtros(e));
-hueInput.addEventListener(`input`, (e) => filtros(e));
-saturatedInput.addEventListener(`input`, (e) => filtros(e));
-invertInput.addEventListener(`input`, (e) => filtros(e));
-// para ver cambiar el valor del input
+brightInput.addEventListener(`input`, () => filtros());
+opacityInput.addEventListener(`input`, () => filtros());
+contrastInput.addEventListener(`input`, () => filtros());
+blurInput.addEventListener(`input`, () => filtros());
+grayscaleInput.addEventListener(`input`, () => filtros());
+sepiaInput.addEventListener(`input`, () => filtros());
+hueInput.addEventListener(`input`, () => filtros());
+saturatedInput.addEventListener(`input`, () => filtros());
+invertInput.addEventListener(`input`, () => filtros());
 
 //********************************
 // input para reestablecer filtros 
@@ -153,7 +152,7 @@ const btnResetFilter = document.getElementById(`btn-reset`);
 btnResetFilter.addEventListener(`click`, () => reestrablecerFiltros())
 
 const reestrablecerFiltros = () => {
-    imgMeme.style.filter = `brightness(${brightInput.value = 1}) opacity(${opacityInput.value = 1}) blur(${blurInput.value = 0}px) contrast(${contrastInput.value = 100}%) grayscale(${grayscaleInput.value = 0}%) hue-rotate(${hueInput.value = 0}deg) sepia(${sepiaInput.value = 0}%) saturate(${saturatedInput.value = 100}%) invert(${invertInput.value = 0})`;
+    imgMeme.style.filter = `none`;
 }
 
 //********************************
@@ -338,8 +337,8 @@ const btnContornoClaro = document.getElementById(`btn-contorno-claro`);
 const btnContornoOscuro = document.getElementById(`btn-contorno-oscuro`);
 
 btnContornoNinguno.addEventListener(`click`, () => contornoText('0px'));
-btnContornoClaro.addEventListener(`click`, () => contornoText(`0.5px #FFF`));
-btnContornoOscuro.addEventListener(`click`, () => contornoText(`0.5px #000`));
+btnContornoClaro.addEventListener(`click`, () => contornoText(`0.5px #ffffff`));
+btnContornoOscuro.addEventListener(`click`, () => contornoText(`0.5px #000000`));
 
 const contornoText = (contorno) => {
     topText.style.webkitTextStroke = contorno;
@@ -387,3 +386,13 @@ const containerMeme = document.getElementById(`container-meme`);
     window.addEventListener('resize', () => ajustarImagen())
 
 
+    // const resizewindow = () => {
+    //     if (body.getBoundingClientRect().width > 1300) {
+    //     asidetext.classList.toggle(`hidden`);
+    //     asideimg.classList.toggle(`hidden`);
+    // } else {
+    //     aside.style.display = `none`;
+    // }
+    // } // utilizamos display xq no tenemos la clase hidden.
+    
+    // window.addEventListener(`resize`, resizewindow);

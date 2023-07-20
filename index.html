@@ -177,9 +177,7 @@
                     </div>
                 </fieldset>
                 <!-- BOTON PARA REESTABLECER FILTROS -->
-                <button class="button__reset" id="btn-reset">
-                    Reestablecer filtros
-                </button>
+                <input type="reset" value="Reestablecer filtros" class="button__reset" id="btn-reset">
             </form>
         </section>
     </aside>
@@ -197,7 +195,7 @@
                     <legend class="control__title">
                         SUPERIOR
                     </legend>
-                    <textarea name="" id="top-text-textarea" class="panel-control__input">TOP TEXT</textarea>
+                    <textarea name="" id="top-text-textarea" class="panel-control__input" maxlength="22">TOP TEXT</textarea>
                     <div class="flex-container panel-control__checkbox">
                         <input type="checkbox" id="top-text-input">
                         <label for="top-text-input">
@@ -302,7 +300,7 @@
                         <!-- BOTON PARA FONDO TRANSPARENTE EN EL TEXTO DEL MEME -->
                         <div class="flex-container panel-control__checkbox">
                             <input type="checkbox" name="" id="checkbox-transparent">
-                            <label for="">
+                            <label for="checkbox-transparent">
                                 Fondo transparente
                             </label>
                         </div>
