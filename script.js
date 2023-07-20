@@ -6,50 +6,52 @@
 //intercambiar un aside con el otro con los botones texto e imagen
 //********************************
 
-const btnText = document.getElementById(`btn-text`); //trae el boton para activar el aside texto
 const btnImg = document.getElementById(`btn-img`); //trae el boton para activar el aside img
+const btnText = document.getElementById(`btn-text`); //trae el boton para activar el aside texto
 
-const panelText = document.getElementById(`panel-text`); //trae el panel texto
 const panelImg = document.getElementById(`panel-img`); //trae el panel imagen
+const panelText = document.getElementById(`panel-text`); //trae el panel texto
 
-btnText.addEventListener('click', ()=> hidenTextAside());
 btnImg.addEventListener('click', ()=> hidenImgAside());
-
-const hidenTextAside = () => {
-    panelImg.classList.add('hidden');
-    panelText.classList.remove('hidden');
-}
+btnText.addEventListener('click', ()=> hidenTextAside());
 
 const hidenImgAside = () => {
     panelText.classList.add('hidden');
     panelImg.classList.remove('hidden');
 }
 
+const hidenTextAside = () => {
+    panelImg.classList.add('hidden');
+    panelText.classList.remove('hidden');
+}
+
 //********************************
 //cambiar a modo oscuro los asides y modificar el button para cambiar los modos
 //********************************
-const mainContainer = document.getElementById("container-main");
-const header = document.getElementById("header");
-const inputDark = document.getElementsByClassName(`panel-control__input`);
+//const mainContainer = document.getElementById("container-main");
+//const header = document.getElementById("header");
+//const inputDark = document.getElementsByClassName(`panel-control__input`);
 const modeButton = document.getElementById("mode-btn");
+const body = document.getElementById(`body`);
 
-modeButton.addEventListener("click", () => changeMode());
+modeButton.addEventListener(`click`, () => changeMode());
 
 const changeMode = () => {
-    //toggle realiza la funcion y su viceversa
-    panelText.classList.toggle(`panel--dark`)
-    mainContainer.classList.toggle(`container-main--dark`)
-    header.classList.toggle(`header--dark`);
-    inputDark[5].classList.toggle(`panel-control__input--dark`);
-
-    //contains es como include
-    if (mainContainer.classList.contains("container-main--dark")) {
-        // con el innerhtml podemos agregar etiquetas
-        modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
-    } else {
-        modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
-    }
+    body.classList.add = ".modo-oscuro";
 }
+
+//primer intento de modo oscuro
+//const changeMode = () => {
+    //toggle realiza la funcion y su viceversa
+    //inputDark[5].classList.toggle(`panel-control__input--dark`);
+    //contains es como include
+    // if (mainContainer.classList.contains("container-main--dark")) {
+    //     // con el innerhtml podemos agregar etiquetas
+    //     modeButton.innerHTML = '<i class="fa-solid fa-lightbulb"></i> Modo claro';
+    // } else {
+    //     modeButton.innerHTML = '<i class="fa-regular fa-lightbulb"></i> Modo oscuro';
+    // }
+//}
 
 //********************************
 //boton para quitar el panel de text o img
@@ -168,7 +170,7 @@ const downloadButton = document.getElementById("download-btn");
 downloadButton.addEventListener(`click`, () => downloadMeme());
 
 const downloadMeme = () => {
-    domtoimage.toBlob(imgMeme).then(function (blob) {
+    domtoimage.toBlob(containerMeme).then(function (blob) {
     window.saveAs(blob, "mi-meme.png");
     });
 };

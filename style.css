@@ -14,7 +14,6 @@ body{
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    overflow: hidden;
 }
 
 /**************************
@@ -64,12 +63,6 @@ button {
     margin: 0em 0.8em;
 }
 
-@media (max-width: 700px) {
-    .header__title {
-        font-size: 25rem;
-    }
-}
-
 /**************************
 Estilos para el main
 ************************** */
@@ -86,6 +79,7 @@ Estilos para el main
     height: 600px;
     width: 100%;
     max-width: 55%;
+    max-height: 610px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -153,7 +147,9 @@ Estilos para el aside de IMAGEN
 }
 
 .panel__close {
-    display: none;
+    display: flex;
+    justify-content: end;
+    width: 100%;
 }
 
 .panel__title {
@@ -301,14 +297,6 @@ input[type="checkbox"] {
     margin-left: 0.1em;
 }
 
-@media (max-width: 1300px) {
-    .panel__close {
-        display: flex;
-        justify-content: end;
-        width: 100%;
-    }
-}
-
 .modo-violet header main aside {
     color: violet;
 }
@@ -317,9 +305,11 @@ input[type="checkbox"] {
 MODO OSCURO
 ************************** */
 
-/* falta cambiar el color al input de range */
+/**************************
+intento 1, fallas: tengo que llamar a todos los input
+************************** */
 
-.header--dark {
+/* .header--dark {
     background-color: #191e2b;
     color: white;
 }
@@ -345,4 +335,52 @@ MODO OSCURO
 
 .panel__close--dark {
     color: white;
+} */
+
+/**************************
+intento 2
+************************** */
+
+.modo-oscuro header {
+    background-color: #191e2b;
+    color: white;
+}
+
+/* .modo-oscuro .container-main--dark {
+    background-color: #30343f;
+    color: white;
+}
+
+.modo-oscuro .panel--dark {
+    background-color: #252935;
+    color: white;
+}
+
+.modo-oscuro .panel-control__input--dark {
+    background-color: #393e49;
+    color: white;
+}
+
+.modo-oscuro .header__button--dark {
+    color: white;
+}
+
+.modo-oscuro .panel__close--dark {
+    color: white;
+} */
+
+/**************************
+aplicacion de @media 
+************************** */
+
+@media (max-width: 700px) {
+    .header__title {
+        font-size: 25rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .panel__close {
+        display: none;
+    }
 }

@@ -23,7 +23,7 @@
       referrerpolicy="no-referrer"
     ></script>
 </head>
-<body>
+<body id="body">
     <div class="container">
         <!-- comienzo de los estilos del header -->
         <header class="header" id="header">
@@ -181,7 +181,7 @@
             </form>
         </section>
     </aside>
-    <aside class="panel" id="panel-text">
+    <aside class="panel hidden" id="panel-text">
         <button class="panel__close" id="btn-close-text">
             <i class="fa-solid fa-xmark"></i>
         </button>
@@ -278,7 +278,7 @@
                                     COLOR
                                 </h3>
                                 <div class="flex-container panel-control__input">
-                                    <input type="color" name="" id="color-picker-text">
+                                    <input type="color" name="" id="color-picker-text" value="#000000">
                                     <span class="panel-value__color" id="color-name-text">
                                         #000000
                                     </span>
@@ -290,7 +290,7 @@
                                     FONDO
                                 </h3>
                                 <div class="flex-container panel-control__input">
-                                    <input type="color" name="" id="color-picker-fondo">
+                                    <input type="color" name="" id="color-picker-fondo" value="#FFFFFF">
                                     <span class="panel-value__color" id="color-name-fondo">
                                         #FFFFFF
                                     </span>
