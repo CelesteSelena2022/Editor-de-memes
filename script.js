@@ -232,7 +232,7 @@ const changeFontFamily = () => {
 };
 
 //********************************
-//tomar el valor del input number para el tamaño del texto y actualizar el tamaño a medida que la ventana del navegador cambie
+//tomar el valor del input number para el tamaño del texto y actualizar el tamaño con su padding a medida que la ventana del navegador cambie 
 //********************************
 
 const inputFontSize = document.getElementById(`input-font-size`);
@@ -250,11 +250,14 @@ const ajustarTexto = () => {
         return
     }
     const tamanioTexto = Math.round((window.innerWidth / 10) * 0.5)
+    const padding = Math.round((window.innerWidth / 10) * 0.2)
     inputFontSize.value = tamanioTexto
+    InputEspaciado.value = padding
     actualizarFontSize();
+    crearEpaciado();
 }
 
-window.addEventListener('resize', ajustarTexto);
+window.addEventListener('resize', () => ajustarTexto());
 
 //********************************
 //cambia la alineacion del topText y bottomText
@@ -382,4 +385,5 @@ const containerMeme = document.getElementById(`container-meme`);
     }
 
     window.addEventListener('resize', () => ajustarImagen())
+
 
