@@ -342,3 +342,30 @@ const contornoText = (contorno) => {
 //********************************
 // espaciado para el texto
 //********************************
+
+const InputEspaciado = document.getElementById(`input-espaciado`);
+
+InputEspaciado.addEventListener(`input`, () => crearEpaciado())
+
+crearEpaciado = () => {
+    topText.style.paddingTop = `${InputEspaciado.value}px`
+    topText.style.paddingBottom = `${InputEspaciado.value}px`
+    bottomText.style.paddingTop = `${InputEspaciado.value}px`
+    bottomText.style.paddingBottom = `${InputEspaciado.value}px`
+}
+
+//********************************
+// espaciado para el texto
+//********************************
+
+const selectInterlineado = document.getElementById(`select-interlineado`);
+
+selectInterlineado.addEventListener(`change`, () => CambiarInterlineado());
+
+const CambiarInterlineado = () => {
+    topText.style.lineHeight = `${selectInterlineado.value}`;
+    bottomText.style.lineHeight = `${selectInterlineado.value}`;
+}
+
+
+

@@ -93,7 +93,6 @@ Estilos para el main
 
 .title__meme{
     width: 100%;
-    min-height: 12vh;
     font-size: 55rem;
     font-weight: 900;
     padding: 0.2em;
@@ -104,6 +103,7 @@ Estilos para el main
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
+    line-height: 1.2;
 }
 
 #top-text {
