@@ -377,14 +377,15 @@ const containerMeme = document.getElementById(`container-meme`);
 
     window.addEventListener('resize', () => ajustarImagen())
 
+//********************************
+// Esconder los asides
+//********************************
 
-    // const resizewindow = () => {
-    //     if (body.getBoundingClientRect().width > 1300) {
-    //     asidetext.classList.toggle(`hidden`);
-    //     asideimg.classList.toggle(`hidden`);
-    // } else {
-    //     aside.style.display = `none`;
-    // }
-    // } // utilizamos display xq no tenemos la clase hidden.
-    
-    // window.addEventListener(`resize`, resizewindow);
+    const resizewindow = () => {
+        if (body.getBoundingClientRect().width > 1300) {
+        panelImg.classList.remove(`hidden`);
+    } else {
+        panelImg.classList.add(`hidden`);
+    }
+}
+    window.addEventListener(`resize`, resizewindow);
