@@ -38,7 +38,7 @@ button {
 }
 
 .header {
-    padding: 2.5em 0em;
+    padding: 1.5em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,6 +61,9 @@ button {
 
 .header__button {
     margin: 0em 0.8em;
+    height: 36rem;
+    padding: 0.5em;
+    border-radius: 3px
 }
 
 /**************************
@@ -147,9 +150,11 @@ Estilos para el aside de IMAGEN
 }
 
 .panel__close {
-    display: flex;
-    justify-content: end;
-    width: 100%;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    border-radius: 3px;
+    padding: 0.1em 0.3em;
 }
 
 .panel__title {
@@ -170,6 +175,10 @@ fieldset {
 .control__title {
     margin-bottom: 0.5em;
     font-size: 17rem;
+}
+
+input[type=range] {
+    background: linear-gradient(100deg, #d37768 0%, #b96052 20%);
 }
 
 .panel-control__input {
@@ -297,10 +306,6 @@ input[type="checkbox"] {
     margin-left: 0.1em;
 }
 
-.modo-violet header main aside {
-    color: violet;
-}
-
 /**************************
 MODO OSCURO
 ************************** */
@@ -328,6 +333,59 @@ MODO OSCURO
 .modo-oscuro .panel-control__input{
     background-color: #393e49;
     color: white;
+}
+
+.modo-oscuro .button__reset {
+    background-color: #393e49;
+    color: white;
+}
+
+.modo-oscuro input[type=range] {
+    background: linear-gradient(90deg, #393e49 0%, #393e49 25%);
+}
+
+/**************************
+aplicacion de pseudoclases
+************************** */
+/* pseudoclase para el boton de cerrar aside */
+.panel__close:hover {
+    background-color: #f7c9ac;
+}
+.modo-oscuro .panel__close:hover {
+    background-color: #6c717b;
+}
+/* pseudoclase para botones del header */
+.container-header-button button:hover, .container-header-button button:focus {
+    background-color: #f7c9ac;
+}
+.modo-oscuro .container-header-button button:hover, .modo-oscuro .container-header-button button:focus {
+    background-color: #6c717b;
+}
+/* pseudoclase para inputs, select etc */
+input:not(input[type="color"]):hover, input:not(input[type="color"]):focus {
+    background-color: #f7c9ac;
+}
+select:hover, select:focus {
+    background-color: #f7c9ac;
+}
+textarea:hover, textarea:focus {
+    background-color: #f7c9ac;
+}
+.buttons-container button:hover, .buttons-container button:focus {
+    background-color: #f7c9ac;
+}
+/* pseudoclase para inputs, select etc con modo oscuro */
+.modo-oscuro input:not(input[type="color"]):hover, .modo-oscuro input:not(input[type="color"]):focus {
+    background-color: #6c717b;
+}
+.modo-oscuro select:hover, .modo-oscuro select:focus {
+    background-color: #6c717b;
+}
+.modo-oscuro textarea:hover, .modo-oscuro textarea:focus {
+    background-color: #6c717b;
+}
+.modo-oscuro .buttons-container button:hover, .modo-oscuro .buttons-container button:focus {
+    background-color: #6c717b;
 }
 /**************************
 aplicacion de @media 
