@@ -1,7 +1,9 @@
 # **¡BIENVENIDO AL EDITOR DE MEME!** 
 ## Consigna
 Este es el segundo proyecto que presentar en ADAITW, en donde realizamos la estructura, los estilos de nuestro portafolio web y agregamos nuestras primeras funcionalidades, utilizando las siguientes herramientas:
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzWU8aih12SRx_NTw8WG5TUGZTC7xenAdAKQ7N0fb3ock1M7IPES49ZNM67UoHMt3ulKk&usqp=CAU" alt="imagen de icon html, css y js">
+
 ## Criterios de aceptación
 ### Los requisitos mínimos para que el proyecto sea considerado para la entrega son:
 * Se debe respetar el siguiente [diseño](https://frontend-proyecto-meme.adaitw.org/)
@@ -53,5 +55,5 @@ Este es el segundo proyecto que presentar en ADAITW, en donde realizamos la estr
     * Cuando un elemento está oculto (modales, carrito, productos), no debe poder moverse el foco a elementos del mismo
     * Cuando se abre el panel, el foco salta al botón de cierre del mismo
     * Cuando se cierra el panel, el foco salta al botón de apertura del mismo
-    
+
 [Ver sitio web deployado](https://celesteselena2022.github.io/Editor-de-memes/)
